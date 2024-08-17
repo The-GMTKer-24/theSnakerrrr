@@ -268,7 +268,6 @@ public class PlayerMovement : MonoBehaviour
             accelRate = 0;
         float speedDelta = targetSpeed - rb.velocity.x;
         float movement = speedDelta * accelRate;
-        Debug.Log($"{targetSpeed}, {speedDelta}");
         rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
     }
 

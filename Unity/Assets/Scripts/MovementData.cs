@@ -40,7 +40,6 @@ public class MovementData : ScriptableObject
     [Header("Jayden we can have coyote time are you happy?????????????????")]
 	[SerializeField] float coyoteTime; 
 	[SerializeField] float jumpInputBufferTime; 
-    
     public float GravityStrength => -(2* jumpHeight) / (jumpDuration * jumpDuration);
     public float GravityScale => GravityStrength / Physics2D.gravity.y;
     public float MoveAccelerationAmount => (50 * acceleration) / maxHorizontalSpeed;
