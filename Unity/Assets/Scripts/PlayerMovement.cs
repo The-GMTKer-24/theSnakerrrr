@@ -91,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (rb.velocity.y < 0)
         {
+            
             SetGravity(movementData.GravityScale * movementData.FallingGravityScalar);
         }
         else
@@ -145,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
             isJumpShort = false;
             isFalling = false;
             wallJumpStartTime = Time.time;
-            lastWallJumpDirection = LastWallRightTime > 0 ? -1 : 1;
+            lastWallJumpDirection = LastWallRightTime > 0 ? 1 : -1;
             WallJump(lastWallJumpDirection);
         }
     }
@@ -184,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckDirection(float inputDirectionX)
     {
-        if (inputDirectionX > 0 != FacingRight)
+        if (inputDirectionX < 0 != FacingRight)
             Turn();
     }
 
@@ -249,7 +250,9 @@ public class PlayerMovement : MonoBehaviour
     private void Move(float speedFactor)
     {
         float targetSpeed  = inputDirection.x * movementData.MaxHorizontalSpeed;
+        
         targetSpeed = Mathf.Lerp(rb.velocity.x, targetSpeed, speedFactor);
+        
         float accelRate = (LastGroundTime > 0)
             ? ((Mathf.Abs(targetSpeed) > 0.01f) ? movementData.MoveAccelerationAmount : movementData.MoveDecelerationAmount)
             : ((Mathf.Abs(targetSpeed) > 0.01f)
@@ -261,11 +264,11 @@ public class PlayerMovement : MonoBehaviour
             targetSpeed *= movementData.JumpHangSpeedScalar;
         }
         // aproximately because resharper has the brains of a 2 year old with a quantum physics degreee
-        if (Mathf.Abs(rb.velocity.x) > MathF.Abs(targetSpeed) &&
-            Mathf.Approximately(Mathf.Sign(rb.velocity.x), Mathf.Sign(targetSpeed)))
+        if(Mathf.Abs(rb.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(rb.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastGroundTime < 0)
             accelRate = 0;
         float speedDelta = targetSpeed - rb.velocity.x;
         float movement = speedDelta * accelRate;
+        Debug.Log($"{targetSpeed}, {speedDelta}");
         rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
     }
 
