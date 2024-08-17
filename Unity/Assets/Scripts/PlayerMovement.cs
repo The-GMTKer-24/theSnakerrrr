@@ -88,15 +88,17 @@ public class PlayerMovement : MonoBehaviour
         else if (Jumping || WallJumping || isFalling && Mathf.Abs(rb.velocity.y) < movementData.JumpHangThreshold)
         {
             SetGravity(movementData.GravityScale * movementData.JumpHangGravityScale);
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -movementData.TerminalSpeed));
         }
         else if (rb.velocity.y < 0)
         {
-            
             SetGravity(movementData.GravityScale * movementData.FallingGravityScalar);
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -movementData.TerminalSpeed));
         }
         else
         {
             SetGravity(movementData.GravityScale);
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -movementData.TerminalSpeed));
         }
     }
 
