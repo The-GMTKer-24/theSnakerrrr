@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    [SerializeField] public Transform target;
     [SerializeField] private float strength;
     [SerializeField] private CameraShake shake;
     [SerializeField] private float depth = -10;
-    private void LateUpdate()
+    private void FixedUpdate()
     {
+        if (!target)
+        {
+            return;
+        }
         Vector2 current = transform.position;
-
+        
         Vector2 next = (Vector2)target.transform.position * strength + current * (1 - strength);
 
         Vector3 newPosition = new Vector3(next.x, next.y, depth) + shake.currentShake;

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Camera camera;
+    [SerializeField] public Camera camera;
     [SerializeField] private float impulse;
     [SerializeField] private GameObject projectile;
     [SerializeField] private int maxAmmo;
