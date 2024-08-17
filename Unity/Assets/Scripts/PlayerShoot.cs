@@ -46,7 +46,7 @@ public class PlayerShoot : MonoBehaviour
         {
             return;
         }
-
+        ammo--;
         Vector3 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
         camera.GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
         Vector3 delta = transform.position - mousePosition;
@@ -54,7 +54,7 @@ public class PlayerShoot : MonoBehaviour
         GameObject proj = Instantiate(projectile, transform.position,Quaternion.identity);
         proj.GetComponent<Projectile>().SetMoveDirection(delta * -1, this.transform);
         rb.AddForce(delta * impulse, ForceMode2D.Impulse);
-        ammo--;
+
     }
 
     public void AddAmmo()

@@ -48,7 +48,7 @@ MonoBehaviour:
   rend: {fileID: 3461535162232420671}
   hittable:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   width:
     serializedVersion: 2
     m_Curve:
@@ -83,8 +83,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   lifetime: 0.15
-  particleLifeTime: 2
+  particleLifeTime: 100
   impactParticles: {fileID: 6312313018138299983, guid: f31f3e8ed2945d649b801c06215c234e, type: 3}
+  enemyTag: Enemy
 --- !u!120 &3461535162232420671
 LineRenderer:
   serializedVersion: 2
