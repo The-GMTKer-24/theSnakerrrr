@@ -6,7 +6,9 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "MovementData", menuName = "MovementData", order = 1)]
 public class MovementData : ScriptableObject
 {
-    [Header("Gravity")] [SerializeField] private float fallingGravityScale;
+    [Header("Gravity")] 
+    [SerializeField] private float fallingGravityScalar;
+    
     [SerializeField] private float terminalSpeed;
     [SerializeField] private float fastFallGravityScale;
     [SerializeField] private float fastFallTerminalSpeed;
@@ -38,42 +40,12 @@ public class MovementData : ScriptableObject
     [Header("Jayden we can have coyote time are you happy?????????????????")]
 	[SerializeField] float coyoteTime; 
 	[SerializeField] float jumpInputBufferTime; 
-    
     public float GravityStrength => -(2* jumpHeight) / (jumpDuration * jumpDuration);
     public float GravityScale => GravityStrength / Physics2D.gravity.y;
     public float MoveAccelerationAmount => (50 * acceleration) / maxHorizontalSpeed;
-
-    public float FallingGravityScale1 => fallingGravityScale;
-
-    public float TerminalSpeed1 => terminalSpeed;
-
-    public float FastFallGravityScale1 => fastFallGravityScale;
-
-    public float FastFallTerminalSpeed1 => fastFallTerminalSpeed;
-
-    public float MaxHorizontalSpeed1 => maxHorizontalSpeed;
-
-    public float Acceleration1 => acceleration;
-
-    public float Deceleration1 => deceleration;
-
-    public float AirAcceleration1 => airAcceleration;
-
-    public float AirDeceleration1 => airDeceleration;
-
-    public float JumpHeight1 => jumpHeight;
-
-    public float JumpDuration1 => jumpDuration;
-
-    public float ShortJumpGravityScale1 => shortJumpGravityScale;
-
-    public float JumpHangGravityScale1 => jumpHangGravityScale;
-
-    public float JumpHangThreshold1 => jumpHangThreshold;
-
-    public float JumpHangAccelerationScalar1 => jumpHangAccelerationScalar;
-
-    public float JumpHangSpeedScalar1 => jumpHangSpeedScalar;
+    
+    public float MoveDecelerationAmount => (50 * deceleration) / maxHorizontalSpeed;
+    public float JumpForce => Mathf.Abs(GravityStrength) * jumpDuration;
 
     public Vector2 WallJumpForce => wallJumpForce;
 
@@ -90,9 +62,7 @@ public class MovementData : ScriptableObject
     public float CoyoteTime => coyoteTime;
 
     public float JumpInputBufferTime => jumpInputBufferTime;
-
-    public float FallingGravityScale => fallingGravityScale;
-
+    
     public float TerminalSpeed => terminalSpeed;
 
     public float FastFallGravityScale => fastFallGravityScale;
@@ -122,4 +92,6 @@ public class MovementData : ScriptableObject
     public float JumpHangAccelerationScalar => jumpHangAccelerationScalar;
 
     public float JumpHangSpeedScalar => jumpHangSpeedScalar;
+
+    public float FallingGravityScalar => fallingGravityScalar;
 }
