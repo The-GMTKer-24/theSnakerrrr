@@ -43,7 +43,6 @@ public class Projectile : MonoBehaviour
     {
         if (started)
         {
-            rend.SetPosition(0,source.position);
             timer += Time.deltaTime;
             float targetWidth = width.Evaluate(timer);
             rend.startWidth = targetWidth;
@@ -52,6 +51,11 @@ public class Projectile : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+            if (source)
+            {
+                rend.SetPosition(0,source.position);
+            }
+            
         }
     }
 }

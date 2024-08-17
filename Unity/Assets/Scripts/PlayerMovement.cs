@@ -70,11 +70,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Gravity()
     {
-        if (Sliding)
-        {
-            SetGravity(0f);
-        } 
-        else if (rb.velocity.y < 0 && inputDirection.y < 0)// higher grav if pressing down
+        //if (Sliding)
+        //{
+        //    SetGravity(0f);
+        //} 
+        if (rb.velocity.y < 0 && inputDirection.y < 0)// higher grav if pressing down
         {
             SetGravity(movementData.GravityScale * movementData.FastFallGravityScale);
             
