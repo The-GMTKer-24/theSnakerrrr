@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2718235861778923730}
   camera: {fileID: 0}
-  impulse: 80
+  impulse: 70
   projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
   maxAmmo: 1
   shakeTime: 0.7

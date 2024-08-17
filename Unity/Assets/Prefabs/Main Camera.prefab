@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  smoothTime: 0.25
+  strength: 0.1
   shake: {fileID: 5613251222805315948}
   depth: -10
