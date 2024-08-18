@@ -394,6 +394,63 @@ Transform:
   - {fileID: 1842852092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &626162643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.084005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.7550077
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246787760632961262, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_Name
+      value: Smart Shooter (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
 --- !u!114 &746482443 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 593839500265978397, guid: 564d3a0fe7c590e43824d6dadfabde2d, type: 3}
@@ -405,6 +462,120 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc73ca2b5850e9f43ba655e761a12c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &837760910
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.08451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246787760632961262, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_Name
+      value: Smart Shooter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+--- !u!1001 &851051716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.12158
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.7605057
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821945006935896748, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246787760632961262, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
+      propertyPath: m_Name
+      value: Smart Shooter (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bdf70d704abfd44782add68b5b19d63, type: 3}
 --- !u!20 &867973380 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5946715757382064502, guid: 564d3a0fe7c590e43824d6dadfabde2d, type: 3}
@@ -1209,3 +1380,6 @@ SceneRoots:
   - {fileID: 2139272963}
   - {fileID: 280851276}
   - {fileID: 1803659779}
+  - {fileID: 837760910}
+  - {fileID: 851051716}
+  - {fileID: 626162643}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public float deathShakeTime;
     [SerializeField] public AnimationCurve deathShake;
     private bool dying;
+    public List<Enemy> DeadEnemies;
+
     public void Awake()
     {
         Instance = this;
@@ -45,6 +48,12 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(deathDuration);
         player = Instantiate(playerPrefab, Checkpoints.LastCheckpoint.transform.position, Quaternion.identity);
         camera.target = player.GetComponent<Rigidbody2D>();
+        foreach (Enemy enemy in DeadEnemies.ToList())
+        {
+            Debug.Log("Respawning "+ enemy);
+            enemy.gameObject.SetActive(true);
+            DeadEnemies.Remove(enemy);
+        }
         dying = false;
     }
 }
