@@ -5648,6 +5648,7 @@ MonoBehaviour:
   jetbootsEnabled: 1
   grappleEnabled: 1
   jetboots: {fileID: 8294338072398358110}
+  grappleHooks: {fileID: 9164895370532238614}
 --- !u!1 &9164895370532238614
 GameObject:
   m_ObjectHideFlags: 0

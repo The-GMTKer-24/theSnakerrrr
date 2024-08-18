@@ -8,8 +8,10 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] private bool grappleEnabled;
 
     [SerializeField] private GameObject jetboots;
+    [SerializeField] private GameObject grappleHooks;
     void Start()
     {
         jetboots.SetActive(jetbootsEnabled);
+        grappleHooks.SetActive(grappleEnabled);
     }
 }
