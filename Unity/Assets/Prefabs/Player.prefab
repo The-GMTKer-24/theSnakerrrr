@@ -5650,6 +5650,7 @@ MonoBehaviour:
   jetbootsEnabled: 1
   grappleEnabled: 1
   jetboots: {fileID: 8294338072398358110}
+  grappleHooks: {fileID: 9164895370532238614}
 --- !u!1 &9164895370532238614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,9 +5709,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  minimumRopeLength: 0
-  lineRenderer: {fileID: 0}
+    m_Bits: 136
+  minimumRopeLength: 3
+  lineRenderer: {fileID: 8061377098848638736}
   distanceJoint: {fileID: 4708295479897969143}
 --- !u!120 &8061377098848638736
 LineRenderer:
