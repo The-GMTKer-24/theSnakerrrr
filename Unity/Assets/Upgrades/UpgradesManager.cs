@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class UpgradesManager : MonoBehaviour
 {
+    [SerializeField] private bool jetbootsEnabled;
+    [SerializeField] private bool grappleEnabled;
+
     [SerializeField] private GameObject jetboots;
     void Start()
     {
-        jetboots.SetActive(false);
-        jetboots.SetActive(false);
+        jetboots.SetActive(jetbootsEnabled);
     }
 }
