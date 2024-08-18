@@ -29,6 +29,7 @@ public class GrapplingHook : MonoBehaviour
         inputMap = new InputMap();
         useHook = inputMap.Player.Use;
         useHook.started += ConnectHook;
+        useHook.canceled += DisconnectHook;
     }
 
 
@@ -44,24 +45,8 @@ public class GrapplingHook : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (useHook.IsPressed())
-        {
-            Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            lineRenderer.SetPosition(0, mousePos);
-            lineRenderer.SetPosition(1, transform.position);
-            distanceJoint.connectedAnchor = mousePos;
-            distanceJoint.enabled = true;
-            lineRenderer.enabled = true;
-        }
-        else
-        {
-
-            distanceJoint.enabled = false;
-            lineRenderer.enabled = false;
-        }
-
         if (distanceJoint.enabled)
         {
             lineRenderer.SetPosition(1, transform.position);
@@ -70,12 +55,19 @@ public class GrapplingHook : MonoBehaviour
 
     void ConnectHook(InputAction.CallbackContext callbackContext)
     {
+        Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        lineRenderer.SetPosition(0, mousePos);
+        lineRenderer.SetPosition(1, transform.position);
+        distanceJoint.connectedAnchor = mousePos;
+        distanceJoint.enabled = true;
+        lineRenderer.enabled = true;
 
     }
 
     void DisconnectHook(InputAction.CallbackContext callbackContext)
     {
-
+        distanceJoint.enabled = false;
+        lineRenderer.enabled = false;
     }
 
 }
