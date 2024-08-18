@@ -57,9 +57,7 @@ public class GrapplingHook : MonoBehaviour
 
     void ConnectHook(InputAction.CallbackContext callbackContext)
     {
-        Debug.Log("Called :)");
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        Debug.Log(mousePosition);
         // GetComponent<Camera>().GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
         Vector2 delta = mousePosition- transform.position;
         delta.Normalize();
@@ -70,7 +68,6 @@ public class GrapplingHook : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log("Collided :)");
             lineRenderer.SetPosition(0, hit.point);
             lineRenderer.SetPosition(1, transform.position);
             distanceJoint.connectedAnchor = hit.point;

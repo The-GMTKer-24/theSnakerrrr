@@ -53,9 +53,9 @@ public class PlayerShoot : MonoBehaviour
         camera.GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
         Vector2 delta = transform.position - mousePosition;
         delta.Normalize();
-        delta.y /= verticalDamping;
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
         proj.GetComponent<Projectile>().SetMoveDirection(delta * -1, this.transform);
+        delta.y /= verticalDamping;
         rb.AddForce(delta * impulse, ForceMode2D.Impulse);
 
     }
