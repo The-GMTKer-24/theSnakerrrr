@@ -8,7 +8,6 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] public Transform target;
     [SerializeField] private float strength;
     [SerializeField] private CameraShake shake;
-    [SerializeField] private float depth = -10;
 
     private void FixedUpdate()
     {
@@ -24,7 +23,7 @@ public class CameraFollow : MonoBehaviour
             next = transform.position;
         }
         
-        Vector3 newPosition = new Vector3(next.x, next.y, depth) + shake.currentShake;
+        Vector3 newPosition = new Vector3(next.x, next.y, this.transform.position.z) + shake.currentShake;
         transform.position = newPosition;
     }
     
