@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(Instantiate(deathParticles,transform.position,quaternion.identity),deathParticlesLength);
         Destroy(gameObject);
+        
     }
 
     public void OnCollisionEnter2D(Collision2D other)

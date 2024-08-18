@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -23,6 +24,10 @@ public class PlayerManager : MonoBehaviour
         if (dying)
             return;
         dying = true;
+        foreach (Bullet bullet in Bullet.bullets.ToList())
+        {
+            bullet.Splode();
+        }
         Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
         Destroy(player);
         camera.GetComponent<CameraShake>().Shake(deathShakeTime, deathShake);
