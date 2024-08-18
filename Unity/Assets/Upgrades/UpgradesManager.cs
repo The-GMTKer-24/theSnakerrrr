@@ -7,6 +7,7 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] private GameObject jetboots;
     void Start()
     {
-        jetboots.SetActive(true);
+        jetboots.SetActive(false);
+        jetboots.SetActive(false);
     }
 }
