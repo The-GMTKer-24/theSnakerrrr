@@ -9,7 +9,7 @@ public class MatchCameras : MonoBehaviour
 
     [SerializeField] private Camera orthographic;
     // Start is called before the first frame update
-    void Start()
+    void FixedUpdate()
     {
         float fov = (float)Math.PI * 2 * perspective.fieldOfView / 360;
         float depth = perspective.gameObject.transform.position.z;
