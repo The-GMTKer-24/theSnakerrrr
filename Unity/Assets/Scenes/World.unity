@@ -279,6 +279,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1227353128}
     - target: {fileID: 3768025619915128164, guid: 863cb0f2c2d92e345947a2bd31a4db0f, type: 3}
+      propertyPath: mouseCamera
+      value: 
+      objectReference: {fileID: 393137694}
+    - target: {fileID: 3768025619915128164, guid: 863cb0f2c2d92e345947a2bd31a4db0f, type: 3}
       propertyPath: deathDuration
       value: 1
       objectReference: {fileID: 0}
