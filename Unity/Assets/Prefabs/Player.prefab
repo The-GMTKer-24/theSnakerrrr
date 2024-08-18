@@ -439,6 +439,7 @@ MonoBehaviour:
   slider: {fileID: 6585496942908652890}
   system: {fileID: 8596004045615594757}
   currentFuel: 0
+  fuelRequirement: 0.5
 --- !u!1 &8466798871195279044
 GameObject:
   m_ObjectHideFlags: 0

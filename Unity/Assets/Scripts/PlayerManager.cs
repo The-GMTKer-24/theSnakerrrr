@@ -43,7 +43,7 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(deathDuration);
         player = Instantiate(playerPrefab, Checkpoints.LastCheckpoint.transform.position, Quaternion.identity);
-        camera.target = player.transform;
+        camera.target = player.GetComponent<Rigidbody2D>();
         dying = false;
     }
 }
