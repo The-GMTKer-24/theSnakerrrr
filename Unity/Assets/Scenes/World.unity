@@ -725,7 +725,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500893668}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -779,7 +779,7 @@ Transform:
   m_GameObject: {fileID: 1500893668}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5000000}
+  m_LocalPosition: {x: 0, y: 0, z: 4000000}
   m_LocalScale: {x: 1000000, y: 1, z: 1000000}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -794,6 +794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1637275901}
+  - component: {fileID: 1637275902}
   m_Layer: 0
   m_Name: Background Manager
   m_TagString: Untagged
@@ -810,12 +811,35 @@ Transform:
   m_GameObject: {fileID: 1637275900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9302135, y: -0.09785028, z: -0.009202534}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637275902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637275900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9b865d10f6d39139d02af94210121a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: {fileID: 3661983396920799713, guid: 3ee65faeae34f11e29a91446d6eefb22, type: 3}
+  rowWidth: 4
+  rowCount: 8
+  inRowSpacing: 750
+  betweenRowSpacing: 750
+  maxInRowRandom: 100
+  maxSideRandom: 100
+  rotation: {x: 70, y: -90, z: -90}
+  scaleStart: {fileID: 1637275901}
+  xClearZone: 500
+  zClearZone: 1300
 --- !u!1001 &1696856959
 PrefabInstance:
   m_ObjectHideFlags: 0
