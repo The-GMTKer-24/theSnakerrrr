@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 2718235861778923730}
   - component: {fileID: 7688245934234779913}
   - component: {fileID: 4505919872258923194}
+  - component: {fileID: 4447723272438016970}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -681,6 +682,26 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!232 &4447723272438016970
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466798871195279044}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.005
+  m_MaxDistanceOnly: 1
 --- !u!1 &8535892855642654035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5646,7 +5667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b82fe8c39cbf64589e29e9190aa401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetbootsEnabled: 1
+  jetbootsEnabled: 0
   grappleEnabled: 1
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
@@ -5662,7 +5683,6 @@ GameObject:
   - component: {fileID: 7038631814358593848}
   - component: {fileID: 8061377098848638736}
   - component: {fileID: 6593542481240072982}
-  - component: {fileID: 4708295479897969143}
   m_Layer: 0
   m_Name: GrapplingHook
   m_TagString: Untagged
@@ -5708,9 +5728,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 136
-  minimumRopeLength: 3
+  ropeLength: 3
   lineRenderer: {fileID: 8061377098848638736}
-  distanceJoint: {fileID: 4708295479897969143}
+  distanceJoint: {fileID: 4447723272438016970}
 --- !u!120 &8061377098848638736
 LineRenderer:
   serializedVersion: 2
@@ -5844,26 +5864,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &4708295479897969143
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9164895370532238614}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 1.3148807
-  m_MaxDistanceOnly: 1
 --- !u!1001 &4277278888860338542
 PrefabInstance:
   m_ObjectHideFlags: 0
