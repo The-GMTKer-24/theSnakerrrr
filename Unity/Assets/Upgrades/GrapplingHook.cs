@@ -15,7 +15,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float shakeTime;
     [SerializeField] private AnimationCurve shakeIntensity;
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private float minimumRopeLength;
+    [FormerlySerializedAs("minimumRopeLength")] [SerializeField] private float ropeLength;
     public LineRenderer lineRenderer;
     [SerializeField] public DistanceJoint2D distanceJoint;
 
@@ -62,15 +62,20 @@ public class GrapplingHook : MonoBehaviour
         delta.Normalize();
 
         Debug.DrawRay(transform.position, delta);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, delta, 100000, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, delta, ropeLength, layerMask);
 
 
         if (hit.collider != null)
         {
+            if (hit.transform.gameObject.GetComponent<Ungrapplable>())
+            {
+                print("Animation pending");
+                return;
+            }
             lineRenderer.SetPosition(0, hit.point);
             lineRenderer.SetPosition(1, transform.position);
             distanceJoint.connectedAnchor = hit.point;
-            distanceJoint.distance = Mathf.Max(Vector2.Distance(transform.position, hit.point), minimumRopeLength);
+            distanceJoint.distance = Mathf.Max(Vector2.Distance(transform.position, hit.point), ropeLength);
             distanceJoint.enabled = true;
             lineRenderer.enabled = true;
         }
