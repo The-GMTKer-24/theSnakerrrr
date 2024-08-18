@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6389933777704741638
+--- !u!1 &3991081848715818360
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4680199092360516191}
-  - component: {fileID: 3355077505331948475}
-  - component: {fileID: 5214052135932340340}
+  - component: {fileID: 6127076062638804194}
+  - component: {fileID: 5760612407812734469}
+  - component: {fileID: 2915059558793921353}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4680199092360516191
+--- !u!4 &6127076062638804194
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6389933777704741638}
+  m_GameObject: {fileID: 3991081848715818360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.33375168, y: 7.917349, z: -0.9040666}
@@ -33,26 +33,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3355077505331948475
+--- !u!114 &5760612407812734469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6389933777704741638}
+  m_GameObject: {fileID: 3991081848715818360}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fab278baa0284a1dad4a8a9205aa2553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
---- !u!61 &5214052135932340340
+--- !u!61 &2915059558793921353
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6389933777704741638}
+  m_GameObject: {fileID: 3991081848715818360}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
