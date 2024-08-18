@@ -53,7 +53,7 @@ public class PlayerShoot : MonoBehaviour
         Vector3 mousePosition = mouseCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
         print(mousePosition);
         camera.GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
-        Vector2 delta = (Vector3)transform.position - mousePosition;
+        Vector2 delta = transform.position - mousePosition;
         delta.Normalize();
         delta.y /= verticalDamping;
         GameObject proj = Instantiate(projectile, transform.position,Quaternion.identity);
