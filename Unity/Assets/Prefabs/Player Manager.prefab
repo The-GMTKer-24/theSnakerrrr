@@ -44,8 +44,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba7031d6b445a7b256f64632de39aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticles: {fileID: 505258978817807498, guid: aae0467ea9398214ea12743fea82a7d3, type: 3}
-  deathDuration: 0
+  deathParticles: {fileID: 505258978817807498, guid: d149425dc9c0cd343af768c4ecdd44d1, type: 3}
+  deathDuration: 1
   camera: {fileID: 0}
   player: {fileID: 0}
   playerPrefab: {fileID: 8466798871195279044, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+  deathShakeTime: 1
+  deathShake:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.0746782
+      outSlope: 2.0746782
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05639098
+    - serializedVersion: 3
+      time: 0.107294776
+      value: 0.992307
+      inSlope: 0.0060378043
+      outSlope: 0.0060378043
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.25799957
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.15030178
+      outSlope: 0.15030178
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.60714287
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

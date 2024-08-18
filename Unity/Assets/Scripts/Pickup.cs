@@ -17,7 +17,6 @@ namespace DefaultNamespace
         private float shrinkTimer;
         public void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log(active);
             if (other.gameObject.CompareTag(playerTag) && active)
             {
                 other.GetComponent<PlayerShoot>().AddAmmo();

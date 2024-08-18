@@ -10,6 +10,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public CameraFollow camera;
     [SerializeField] public GameObject player;
     [SerializeField] public GameObject playerPrefab;
+    [SerializeField] public float deathShakeTime;
+    [SerializeField] public AnimationCurve deathShake;
     private bool dying;
     public void Awake()
     {
@@ -23,6 +25,7 @@ public class PlayerManager : MonoBehaviour
         dying = true;
         Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
         Destroy(player);
+        camera.GetComponent<CameraShake>().Shake(deathShakeTime, deathShake);
         StartCoroutine(Respawn());
     }
 
