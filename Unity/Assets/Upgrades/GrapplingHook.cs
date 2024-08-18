@@ -67,6 +67,11 @@ public class GrapplingHook : MonoBehaviour
 
         if (hit.collider != null)
         {
+            if (hit.transform.gameObject.GetComponent<Ungrapplable>())
+            {
+                print("Animation pending");
+                return;
+            }
             lineRenderer.SetPosition(0, hit.point);
             lineRenderer.SetPosition(1, transform.position);
             distanceJoint.connectedAnchor = hit.point;
