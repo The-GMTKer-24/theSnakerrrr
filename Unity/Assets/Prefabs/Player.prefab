@@ -682,6 +682,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  ammo: 0
 --- !u!232 &4447723272438016970
 DistanceJoint2D:
   m_ObjectHideFlags: 0

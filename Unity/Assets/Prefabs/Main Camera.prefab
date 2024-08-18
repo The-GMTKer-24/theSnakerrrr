@@ -122,8 +122,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  strength: 0.05
+  strength: 0.1
   shake: {fileID: 5613251222805315948}
+  defaultDistance: -15
+  minSpeed: 10
+  maxSpeed: 70
+  zoomAmount:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0000028396025
+      value: 0.20944497
+      inSlope: 0.017444925
+      outSlope: 0.017444925
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.29050198
+      value: 0.2145127
+      inSlope: 0.20129627
+      outSlope: 0.20129627
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.53172165
+    - serializedVersion: 3
+      time: 0.47269896
+      value: 0.5891422
+      inSlope: 4.4044895
+      outSlope: 4.4044895
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5296992
+      value: 0.9740535
+      inSlope: 0.023905793
+      outSlope: 0.023905793
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15453935
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.055170007
+      outSlope: 0.055170007
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  zoomScale: -5
+  power: 0.1
 --- !u!114 &2788302879705834063
 MonoBehaviour:
   m_ObjectHideFlags: 0
