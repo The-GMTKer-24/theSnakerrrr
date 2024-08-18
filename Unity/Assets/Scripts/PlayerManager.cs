@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public GameObject deathParticles;
     [SerializeField] public float deathDuration;
     [SerializeField] public CameraFollow camera;
+    [SerializeField] public Camera mouseCamera;
     [SerializeField] public GameObject player;
     [SerializeField] public GameObject playerPrefab;
     [SerializeField] public float deathShakeTime;
@@ -24,10 +25,14 @@ public class PlayerManager : MonoBehaviour
         if (dying)
             return;
         dying = true;
-        foreach (Bullet bullet in Bullet.bullets.ToList())
+        if (Bullet.bullets != null)
         {
-            bullet.Splode();
+            foreach (Bullet bullet in Bullet.bullets.ToList())
+            {
+                bullet.Splode();
+            }
         }
+
         Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
         Destroy(player);
         camera.GetComponent<CameraShake>().Shake(deathShakeTime, deathShake);
@@ -39,6 +44,7 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(deathDuration);
         player = Instantiate(playerPrefab, Checkpoints.LastCheckpoint.transform.position, Quaternion.identity);
         player.GetComponent<PlayerShoot>().camera = camera.GetComponent<Camera>();
+        player.GetComponent<PlayerShoot>().mouseCamera = mouseCamera;
         camera.target = player.transform;
         dying = false;
     }
