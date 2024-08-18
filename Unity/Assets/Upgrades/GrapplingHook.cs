@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -16,6 +17,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private AnimationCurve shakeIntensity;
     [SerializeField] private LayerMask layerMask;
     [FormerlySerializedAs("minimumRopeLength")] [SerializeField] private float ropeLength;
+    [SerializeField] private float ropeDistance;
     public LineRenderer lineRenderer;
     [SerializeField] public DistanceJoint2D distanceJoint;
 
@@ -50,20 +52,19 @@ public class GrapplingHook : MonoBehaviour
     {
         if (distanceJoint.enabled)
         {
-            lineRenderer.SetPosition(1, transform.position);
+            lineRenderer.SetPosition(0, PlayerManager.Instance.player.transform.position);
         }
     }
 
     void ConnectHook(InputAction.CallbackContext callbackContext)
     {
-        Vector3 mousePosition = PlayerManager.Instance.mouseCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        Vector2 mousePosition = PlayerManager.Instance.mouseCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
         // GetComponent<Camera>().GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
-        Vector2 delta = mousePosition- transform.position;
+        Vector2 delta = mousePosition - (Vector2)PlayerManager.Instance.player.transform.position;
         delta.Normalize();
-
-        Debug.DrawRay(transform.position, delta);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, delta, ropeLength, layerMask);
-
+        // amoungus
+        Debug.DrawRay(PlayerManager.Instance.player.transform.position, mousePosition, Color.green,5,false);
+        RaycastHit2D hit = Physics2D.Raycast(PlayerManager.Instance.player.transform.position, delta, ropeDistance, layerMask);
 
         if (hit.collider != null)
         {
@@ -71,16 +72,18 @@ public class GrapplingHook : MonoBehaviour
             {
                 print("Animation pending");
                 return;
+                
             }
-            lineRenderer.SetPosition(0, hit.point);
-            lineRenderer.SetPosition(1, transform.position);
+            lineRenderer.SetPosition(0, PlayerManager.Instance.player.transform.position);
+            lineRenderer.SetPosition(1, hit.point);
             distanceJoint.connectedAnchor = hit.point;
-            distanceJoint.distance = Mathf.Max(Vector2.Distance(transform.position, hit.point), ropeLength);
+            distanceJoint.distance = Mathf.Min(Vector2.Distance(PlayerManager.Instance.player.transform.position, hit.point), ropeLength);
             distanceJoint.enabled = true;
             lineRenderer.enabled = true;
         }
 
     }
+    
 
     void DisconnectHook(InputAction.CallbackContext callbackContext)
     {

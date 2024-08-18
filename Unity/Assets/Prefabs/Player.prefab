@@ -5646,7 +5646,7 @@ Transform:
   m_GameObject: {fileID: 9029059895055752870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1815659, y: -0.57689995, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5667,7 +5667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b82fe8c39cbf64589e29e9190aa401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetbootsEnabled: 0
+  jetbootsEnabled: 1
   grappleEnabled: 1
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
@@ -5728,7 +5728,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 136
-  ropeLength: 3
+  ropeLength: 10
+  ropeDistance: 40
   lineRenderer: {fileID: 8061377098848638736}
   distanceJoint: {fileID: 4447723272438016970}
 --- !u!120 &8061377098848638736
