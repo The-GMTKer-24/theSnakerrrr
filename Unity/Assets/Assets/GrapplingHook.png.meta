@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GrapplingHook_0: 67798685135089430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

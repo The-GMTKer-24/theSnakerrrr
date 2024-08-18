@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Jetboots : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class Jetboots : MonoBehaviour
 
     [SerializeField] private float maxFuel = 20f;
     [SerializeField] private float fuelRegenRate = 0.5f;
-    [SerializeField]
+    [SerializeField] private Slider slider;
+    [SerializeField] private ParticleSystem system;
     private float currentFuel;
     private void Awake()
     {
@@ -45,15 +47,20 @@ public class Jetboots : MonoBehaviour
         }
         else
         {
+            system.Stop();
             if (PlayerManager.Instance.player.GetComponent<PlayerMovement>().LastGroundTime >= 0)
                 currentFuel = Math.Min(currentFuel + fuelRegenRate * Time.fixedDeltaTime, maxFuel);
         }
+
+        slider.value = currentFuel / maxFuel;
     }
 
     private void OnJetButton()
     {
         if (PlayerManager.Instance.player.GetComponent<PlayerMovement>().Jumping)
             return;
+        system.Play();
+        
         GameObject player = PlayerManager.Instance.player;
         Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
         currentFuel -= Time.fixedDeltaTime;
