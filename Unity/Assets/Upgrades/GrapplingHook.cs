@@ -15,6 +15,8 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float shakeTime;
     [SerializeField] private AnimationCurve shakeIntensity;
     [SerializeField] public Camera mainCamera;
+    [SerializeField] private LayerMask layerMask;
+    [SerializeField] private float minimumRopeLength;
     public LineRenderer lineRenderer;
     [SerializeField] public DistanceJoint2D distanceJoint;
 
@@ -55,12 +57,27 @@ public class GrapplingHook : MonoBehaviour
 
     void ConnectHook(InputAction.CallbackContext callbackContext)
     {
-        Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        lineRenderer.SetPosition(0, mousePos);
-        lineRenderer.SetPosition(1, transform.position);
-        distanceJoint.connectedAnchor = mousePos;
-        distanceJoint.enabled = true;
-        lineRenderer.enabled = true;
+        Debug.Log("Called :)");
+        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        Debug.Log(mousePosition);
+        // GetComponent<Camera>().GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
+        Vector2 delta = mousePosition- transform.position;
+        delta.Normalize();
+
+        Debug.DrawRay(transform.position, delta);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, delta, 100000, layerMask);
+
+
+        if (hit.collider != null)
+        {
+            Debug.Log("Collided :)");
+            lineRenderer.SetPosition(0, hit.point);
+            lineRenderer.SetPosition(1, transform.position);
+            distanceJoint.connectedAnchor = hit.point;
+            distanceJoint.distance = Mathf.Max(Vector2.Distance(transform.position, hit.point), minimumRopeLength);
+            distanceJoint.enabled = true;
+            lineRenderer.enabled = true;
+        }
 
     }
 
