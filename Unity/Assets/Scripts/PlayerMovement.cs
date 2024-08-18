@@ -230,6 +230,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetGravity(float gravity)
     {
+
         rb.gravityScale = gravity;
     }
     
