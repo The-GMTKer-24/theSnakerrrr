@@ -642,8 +642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2718235861778923730}
-  camera: {fileID: 0}
-  mouseCamera: {fileID: 0}
   impulse: 50
   verticalDamping: 2
   projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
@@ -5705,12 +5703,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  mainCamera: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  minimumRopeLength: 0
-  lineRenderer: {fileID: 0}
+    m_Bits: 136
+  minimumRopeLength: 3
+  lineRenderer: {fileID: 8061377098848638736}
   distanceJoint: {fileID: 4708295479897969143}
 --- !u!120 &8061377098848638736
 LineRenderer:

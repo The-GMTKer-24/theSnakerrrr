@@ -43,9 +43,6 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(deathDuration);
         player = Instantiate(playerPrefab, Checkpoints.LastCheckpoint.transform.position, Quaternion.identity);
-        player.GetComponent<PlayerShoot>().camera = camera.GetComponent<Camera>();
-        player.GetComponent<PlayerShoot>().mouseCamera = mouseCamera;
-        player.GetComponent<GrapplingHook>().mainCamera = mouseCamera;
         camera.target = player.transform;
         dying = false;
     }
