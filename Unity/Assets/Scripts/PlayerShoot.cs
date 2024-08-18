@@ -11,7 +11,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private int maxAmmo;
     [SerializeField] private float shakeTime;
     [SerializeField] private AnimationCurve shakeIntensity;
-    private int ammo;
+    public int ammo;
     private InputMap inputMap;
     private InputAction shoot;
     public static PlayerShoot Instance;
@@ -39,7 +39,31 @@ public class PlayerShoot : MonoBehaviour
     {
         ammo = maxAmmo;
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<DrainAmmo>())
+        {
+            ammo = 0;
+        }
+        if (other.GetComponent<FreeAmmo>())
+        {
+            ammo = maxAmmo;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.GetComponent<FreeAmmo>())
+        {
+            ammo = maxAmmo;
+        }
+        if (other.GetComponent<DrainAmmo>())
+        {
+            ammo = 0;
+        }
+    }
+
     private void OnShootButton(InputAction.CallbackContext obj)
     {
         if (ammo < 1)
