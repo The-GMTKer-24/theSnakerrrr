@@ -14,7 +14,6 @@ public class GrapplingHook : MonoBehaviour
     private bool ropeAttached;
     [SerializeField] private float shakeTime;
     [SerializeField] private AnimationCurve shakeIntensity;
-    [SerializeField] public Camera mainCamera;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private float minimumRopeLength;
     public LineRenderer lineRenderer;
@@ -57,7 +56,7 @@ public class GrapplingHook : MonoBehaviour
 
     void ConnectHook(InputAction.CallbackContext callbackContext)
     {
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        Vector3 mousePosition = PlayerManager.Instance.mouseCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
         // GetComponent<Camera>().GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
         Vector2 delta = mousePosition- transform.position;
         delta.Normalize();
