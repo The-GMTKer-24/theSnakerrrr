@@ -646,7 +646,7 @@ MonoBehaviour:
   rb: {fileID: 2718235861778923730}
   camera: {fileID: 0}
   mouseCamera: {fileID: 0}
-  impulse: 70
+  impulse: 50
   verticalDamping: 2
   projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
   maxAmmo: 2
@@ -882,7 +882,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
