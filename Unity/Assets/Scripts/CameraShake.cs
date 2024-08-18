@@ -17,7 +17,7 @@ public class CameraShake : MonoBehaviour
         {
             time += Time.deltaTime;
             float strength = curve.Evaluate(time / duration);
-            currentShake = (Random.insideUnitSphere * strength);
+            currentShake = (Vector2)(Random.insideUnitSphere * strength);
             yield return null;
         }
 

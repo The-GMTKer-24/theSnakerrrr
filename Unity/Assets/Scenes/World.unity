@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 393137694}
+    - target: {fileID: 1274760719779907840, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: minimumRopeLength
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4505919872258923194, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: camera
       value: 
@@ -402,6 +406,10 @@ PrefabInstance:
     - target: {fileID: 5555666118688797421, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194506944328197694, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.25258255
       objectReference: {fileID: 0}
     - target: {fileID: 8466798871195279044, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_Name

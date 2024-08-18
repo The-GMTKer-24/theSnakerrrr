@@ -18,7 +18,7 @@ public class Jetboots : MonoBehaviour
     [SerializeField] private float fuelRegenRate = 0.5f;
     [SerializeField] private Slider slider;
     [SerializeField] private ParticleSystem system;
-    private float currentFuel;
+    [SerializeField] private float currentFuel;
     private void Awake()
     {
         inputMap = new InputMap();
@@ -60,7 +60,7 @@ public class Jetboots : MonoBehaviour
         if (PlayerManager.Instance.player.GetComponent<PlayerMovement>().Jumping)
             return;
         system.Play();
-        
+
         GameObject player = PlayerManager.Instance.player;
         Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
         currentFuel -= Time.fixedDeltaTime;
