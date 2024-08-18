@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class GrapplingHook : MonoBehaviour
 {
@@ -14,13 +15,13 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float shakeTime;
     [SerializeField] private AnimationCurve shakeIntensity;
     [SerializeField] public Camera mainCamera;
-    public LineRenderer _lineRenderer;
-    public DistanceJoint2D _distanceJoint;
+    public LineRenderer lineRenderer;
+    [SerializeField] public DistanceJoint2D distanceJoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        _distanceJoint.enabled = false;
+        distanceJoint.enabled = false;
     }
 
     private void Awake()
@@ -48,22 +49,22 @@ public class GrapplingHook : MonoBehaviour
         if (useHook.IsPressed())
         {
             Vector2 mousePos = (Vector2)mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            _lineRenderer.SetPosition(0, mousePos);
-            _lineRenderer.SetPosition(1, transform.position);
-            _distanceJoint.connectedAnchor = mousePos;
-            _distanceJoint.enabled = true;
-            _lineRenderer.enabled = true;
+            lineRenderer.SetPosition(0, mousePos);
+            lineRenderer.SetPosition(1, transform.position);
+            distanceJoint.connectedAnchor = mousePos;
+            distanceJoint.enabled = true;
+            lineRenderer.enabled = true;
         }
         else
         {
 
-            _distanceJoint.enabled = false;
-            _lineRenderer.enabled = false;
+            distanceJoint.enabled = false;
+            lineRenderer.enabled = false;
         }
 
-        if (_distanceJoint.enabled)
+        if (distanceJoint.enabled)
         {
-            _lineRenderer.SetPosition(1, transform.position);
+            lineRenderer.SetPosition(1, transform.position);
         }
     }
 

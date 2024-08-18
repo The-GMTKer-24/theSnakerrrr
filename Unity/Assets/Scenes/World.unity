@@ -442,6 +442,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1274760719779907840, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 393137694}
     - target: {fileID: 2718235861778923730, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_Interpolate
       value: 0
@@ -454,6 +458,14 @@ PrefabInstance:
       propertyPath: mouseCamera
       value: 
       objectReference: {fileID: 393137694}
+    - target: {fileID: 4568041258362061709, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568041258362061709, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -498,11 +510,20 @@ PrefabInstance:
       propertyPath: maxFuel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5555666118688797421, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555666118688797421, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8466798871195279044, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6696139462266278198, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
