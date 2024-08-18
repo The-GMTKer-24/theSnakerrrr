@@ -8,6 +8,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] public Camera camera;
     [SerializeField] public Camera mouseCamera;
     [SerializeField] private float impulse;
+    [SerializeField] private float verticalDamping;
     [SerializeField] private GameObject projectile;
     [SerializeField] private int maxAmmo;
     [SerializeField] private float shakeTime;
@@ -54,6 +55,7 @@ public class PlayerShoot : MonoBehaviour
         camera.GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
         Vector2 delta = (Vector3)transform.position - mousePosition;
         delta.Normalize();
+        delta.y /= verticalDamping;
         GameObject proj = Instantiate(projectile, transform.position,Quaternion.identity);
         proj.GetComponent<Projectile>().SetMoveDirection(delta * -1, this.transform);
         rb.AddForce(delta * impulse, ForceMode2D.Impulse);

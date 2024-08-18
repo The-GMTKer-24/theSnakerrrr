@@ -647,8 +647,9 @@ MonoBehaviour:
   camera: {fileID: 0}
   mouseCamera: {fileID: 0}
   impulse: 70
+  verticalDamping: 2
   projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
-  maxAmmo: 1
+  maxAmmo: 2
   shakeTime: 0.7
   shakeIntensity:
     serializedVersion: 2
