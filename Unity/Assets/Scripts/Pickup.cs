@@ -19,7 +19,7 @@ namespace DefaultNamespace
         {
             if (other.gameObject.CompareTag(playerTag) && active)
             {
-                other.GetComponent<PlayerShoot>().AddAmmo();
+                PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().AddAmmo();
                 active = false;
                 timeUntilRefresh = refreshTime;
                 shrinkTimer = 0;
