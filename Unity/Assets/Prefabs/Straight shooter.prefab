@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1440529245
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.9254902, g: 0.06534538, b: 0, a: 1}
@@ -153,6 +153,7 @@ MonoBehaviour:
   deathParticles: {fileID: 6312313018138299983, guid: 915ca838f7cc98949ae4e2f40acb273b, type: 3}
   deathParticlesLength: 10
   playerTag: Player
+  real: []
   enemyProjectilePrefab: {fileID: 375384860612158672, guid: b71c3c2b8e9f28349863f8c6108524c9, type: 3}
   shotDelay: 1
   projSpeed: 10
