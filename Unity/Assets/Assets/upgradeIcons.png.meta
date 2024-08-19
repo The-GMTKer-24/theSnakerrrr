@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      upgradeIcons_0: -2573463926026678297
+      upgradeIcons_1: -7365030456526001798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
