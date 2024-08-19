@@ -385,6 +385,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &6548670694977657411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7012539632132040460}
+  - component: {fileID: 3575084105857432710}
+  m_Layer: 0
+  m_Name: Playershoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7012539632132040460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548670694977657411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8403387463498711684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3575084105857432710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548670694977657411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279770b6fd7a83f4e925d1448b84e5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2718235861778923730}
+  impulse: 50
+  verticalDamping: 2
+  projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
+  maxAmmo: 2
+  shakeTime: 0.7
+  shakeIntensity:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ammo: 2
 --- !u!1 &8294338072398358110
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +468,7 @@ Transform:
   m_GameObject: {fileID: 8294338072398358110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.183, y: -0.425, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -453,7 +510,6 @@ GameObject:
   - component: {fileID: 6251814661552535287}
   - component: {fileID: 2718235861778923730}
   - component: {fileID: 7688245934234779913}
-  - component: {fileID: 4505919872258923194}
   - component: {fileID: 4447723272438016970}
   m_Layer: 6
   m_Name: Player
@@ -631,58 +687,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &4505919872258923194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8466798871195279044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 279770b6fd7a83f4e925d1448b84e5f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2718235861778923730}
-  impulse: 50
-  verticalDamping: 2
-  projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
-  maxAmmo: 2
-  shakeTime: 0.7
-  shakeIntensity:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 4.6689453
-      outSlope: 4.6689453
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.105041936
-      value: 0.49043503
-      inSlope: -1.0586673
-      outSlope: -1.0586673
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.068965524
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -0.5479978
-      outSlope: -0.5479978
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ammo: 0
 --- !u!232 &4447723272438016970
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -5654,6 +5658,7 @@ Transform:
   - {fileID: 1345493603944815739}
   - {fileID: 442684167499442143}
   - {fileID: 2202559754013715853}
+  - {fileID: 7012539632132040460}
   m_Father: {fileID: 5294337534224250301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4780753020876625069
@@ -5672,6 +5677,8 @@ MonoBehaviour:
   grappleEnabled: 1
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
+  grapplePrice: 0
+  jetbootsPrice: 0
 --- !u!1 &9164895370532238614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5700,7 +5707,7 @@ Transform:
   m_GameObject: {fileID: 9164895370532238614}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.786, y: -0.754, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
