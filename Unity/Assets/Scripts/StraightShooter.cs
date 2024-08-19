@@ -17,7 +17,8 @@ public class StraightShooter : Enemy
         if (shotTimer > shotDelay)
         {
             GameObject newObj = Instantiate(enemyProjectilePrefab, transform.position, Quaternion.identity);
-            newObj.GetComponent<Rigidbody2D>().velocity = transform.right * projSpeed;
+            newObj.GetComponent<Rigidbody2D>().velocity = -transform.right * projSpeed;
+            
             shotTimer = 0;
         }
     }
