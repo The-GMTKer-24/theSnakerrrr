@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float particleLifeTime;
     [SerializeField] private GameObject impactParticles;
     [SerializeField] private String enemyTag;
+    [SerializeField] private float damageWidth;
     private bool started;
     private float timer;
     private Transform source;
@@ -22,12 +23,12 @@ public class Projectile : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position, direction, 1000, hittable);
         if (hit.collider != null)
         {
+            rend.SetPosition(1, hit.point);
             if (hit.collider.gameObject.CompareTag(enemyTag))
             {
                 hit.transform.GetComponent<Enemy>().Die();
                 PlayerShoot.Instance.AddAmmo();
             }
-            rend.SetPosition(1, hit.point);
             GameObject particles =Instantiate(impactParticles, hit.point, Quaternion.identity);
             Destroy(particles,particleLifeTime);
         }
@@ -35,7 +36,20 @@ public class Projectile : MonoBehaviour
         {
             rend.SetPosition(1,direction * 1000 + (Vector2)transform.position);
         }
-
+        
+        Vector2 p1 = rend.GetPosition(0);
+        Vector2 p2 = rend.GetPosition(1);
+        Vector2 delta = p2 - p1;
+        float distance = Vector2.Distance(p1, p2);
+        foreach (RaycastHit2D hits in Physics2D.BoxCastAll(p1,new Vector2(0.1f,damageWidth),0.0f,delta,distance))
+        {
+            Debug.Log(hits);
+            if (hits.collider.CompareTag(enemyTag))
+            {
+                hits.transform.GetComponent<Enemy>().Die();
+                PlayerShoot.Instance.AddAmmo();
+            }
+        }
         started = true;
     }
 

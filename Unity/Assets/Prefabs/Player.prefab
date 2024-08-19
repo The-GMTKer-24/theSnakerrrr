@@ -347,7 +347,7 @@ MonoBehaviour:
   impulse: 50
   verticalDamping: 2
   projectile: {fileID: 3905679434675925411, guid: a9e1036deedb0644a81c30bd02060196, type: 3}
-  maxAmmo: 2
+  maxAmmo: 1
   shakeTime: 0.7
   shakeIntensity:
     serializedVersion: 2
@@ -357,7 +357,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ammonIcon1: {fileID: 7498917195091906031}
   ammonIcon2: {fileID: 137725032724545062}
-  ammo: 2
+  ammo: 1
 --- !u!1 &6854032400142229909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5573,7 +5573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8403387463498711684}
-  - component: {fileID: 4780753020876625069}
+  - component: {fileID: 3971911061747009858}
   m_Layer: 0
   m_Name: Upgrade Manager
   m_TagString: Untagged
@@ -5599,7 +5599,7 @@ Transform:
   - {fileID: 7012539632132040460}
   m_Father: {fileID: 5294337534224250301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4780753020876625069
+--- !u!114 &3971911061747009858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5623,6 +5623,8 @@ MonoBehaviour:
   grappleIcon: {fileID: 198960542079026775}
   bootsIcon: {fileID: 5120517599120264903}
   gunIcon: {fileID: 1979643780612990484}
+  gunOverlay: {fileID: 6520260875931089993}
+  jetpacjOverlay: {fileID: 5779009483203187803}
 --- !u!1 &9164895370532238614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,6 +5839,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5686026568209172119, guid: 871aba44d2a60ef4497fd2e60889a425, type: 3}
+    - target: {fileID: 2393675382875117369, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 43.93921
+      objectReference: {fileID: 0}
     - target: {fileID: 3327008973930814589, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6024,6 +6030,16 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &5779009483203187803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7305357628792761906, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+  m_PrefabInstance: {fileID: 3842400130016836201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6520260875931089993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8011459774815045152, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+  m_PrefabInstance: {fileID: 3842400130016836201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7498917195091906031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6720342587872704390, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}

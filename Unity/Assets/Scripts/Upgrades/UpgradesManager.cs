@@ -18,6 +18,9 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] private GameObject bootsIcon;
     [SerializeField] private GameObject gunIcon;
 
+    [SerializeField] private GameObject gunOverlay;
+    [SerializeField] private GameObject jetpacjOverlay;
+
     void Start()
     {
         RefreshUpgrades();
@@ -28,12 +31,14 @@ public class UpgradesManager : MonoBehaviour
 
         jetboots.SetActive(upgrades.rocketBoots);
         bootsIcon.SetActive(upgrades.rocketBoots);
+        jetpacjOverlay.SetActive(upgrades.rocketBoots);
 
         grappleHooks.SetActive(upgrades.grapplingHook);
         grappleIcon.SetActive(upgrades.grapplingHook);
 
         gunObject.SetActive(upgrades.laserGun);
         gunIcon.SetActive(upgrades.laserGun);
+        gunOverlay.SetActive(upgrades.laserGun);
     }
 
     private void FixedUpdate()
