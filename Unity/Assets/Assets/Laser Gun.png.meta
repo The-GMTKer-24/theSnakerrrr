@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7d1c1723b5d8d34fabfbc49d46a89e9
+guid: 8ed9ee777cad99244965e0968b7018fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5985444327289584241
-    second: SCS_Building_04_Green_Daytime_01_0
+      213: -2513050923102843864
+    second: Laser Gun_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SCS_Building_04_Green_Daytime_01_0
+      name: Laser Gun_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 48
-        height: 89
+        width: 28
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f850709b81e6feca0800000000000000
-      internalID: -5985444327289584241
+      spriteID: 82cccf90089df1dd0800000000000000
+      internalID: -2513050923102843864
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SCS_Building_04_Green_Daytime_01_0: -5985444327289584241
+      Laser Gun_0: -2513050923102843864
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

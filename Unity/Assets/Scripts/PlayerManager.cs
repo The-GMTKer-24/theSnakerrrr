@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
     [SerializeField] public int level1Collectables;
+    [SerializeField] public GameObject playershoot;
     [SerializeField] public GameObject deathParticles;
     [SerializeField] public float deathDuration;
     [SerializeField] public CameraFollow camera;

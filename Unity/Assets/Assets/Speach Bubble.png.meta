@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7d1c1723b5d8d34fabfbc49d46a89e9
+guid: b7a5dbc8e70b6614ea1896389b6d7365
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5985444327289584241
-    second: SCS_Building_04_Green_Daytime_01_0
+      213: -7746098412338488757
+    second: Speach Bubble_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SCS_Building_04_Green_Daytime_01_0
+      name: Speach Bubble_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.7526105, y: -0.012502337}
+      border: {x: 7, y: 9, z: 7, w: 6}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f850709b81e6feca0800000000000000
-      internalID: -5985444327289584241
+      spriteID: b4ad859d884508490800000000000000
+      internalID: -7746098412338488757
       vertices: []
       indices: 
       edges: []
@@ -123,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 389a12b9d0275fe4db4aae3c4ca54705
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SCS_Building_04_Green_Daytime_01_0: -5985444327289584241
+      Speach Bubble_0: -7746098412338488757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

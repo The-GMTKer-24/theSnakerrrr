@@ -42,3 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 308280483
+    locked: 0
+  - name: Far Cloud
+    uniqueID: 2691227069
+    locked: 0
+  - name: Cloud
+    uniqueID: 3366488963
+    locked: 0
+  - name: Far City
+    uniqueID: 450117345
+    locked: 0
+  - name: Medium City
+    uniqueID: 2934246055
+    locked: 0
+  - name: Close City
+    uniqueID: 2535282179
+    locked: 0
