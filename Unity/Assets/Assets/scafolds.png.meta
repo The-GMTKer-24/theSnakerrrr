@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 2a8287ee237aaa449b4aa0005c7a6a9e
+guid: 9c742c46d03d0274485f4bce3ff0ec0f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2573463926026678297
-    second: upgradeIcons_0
+      213: -3514534172617556585
+    second: scafolds_0
   - first:
-      213: -7365030456526001798
-    second: upgradeIcons_1
+      213: -4948696722130242655
+    second: scafolds_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: upgradeIcons_0
+      name: scafolds_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 39
-        width: 21
-        height: 18
+        x: 0
+        y: 31
+        width: 32
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7efc5eea138394cd0800000000000000
-      internalID: -2573463926026678297
+      spriteID: 79db8227acdd93fc0800000000000000
+      internalID: -3514534172617556585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: upgradeIcons_1
+      name: scafolds_1
       rect:
         serializedVersion: 2
-        x: 6
-        y: 10
-        width: 20
-        height: 14
+        x: 0
+        y: 3
+        width: 32
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a79a5d642d72ac990800000000000000
-      internalID: -7365030456526001798
+      spriteID: 1a37940fc82b25bb0800000000000000
+      internalID: -4948696722130242655
       vertices: []
       indices: 
       edges: []
@@ -155,8 +155,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      upgradeIcons_0: -2573463926026678297
-      upgradeIcons_1: -7365030456526001798
+      scafolds_0: -3514534172617556585
+      scafolds_1: -4948696722130242655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
