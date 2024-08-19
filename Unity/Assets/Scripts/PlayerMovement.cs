@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     public bool Sliding { get; private set; }
     
     
+    
     public float LastGroundTime { get; private set; }
     public float LastWallTime { get; private set; }
     public float LastWallRightTime { get; private set; }
@@ -341,15 +342,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        EnableInput();
+    }
+
+    private void OnDisable()
+    {
+        DisableInput();
+    }
+
+    public void EnableInput()
+    {
         move.Enable();
         jump.Enable();
         jump.started += OnJumpDown;
         jump.canceled += OnJumpUp;
     }
 
-
-
-    private void OnDisable()
+    public void DisableInput()
     {
         move.Disable();
         jump.Disable();

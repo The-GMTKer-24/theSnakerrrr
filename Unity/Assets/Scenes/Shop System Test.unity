@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc73ca2b5850e9f43ba655e761a12c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &566224500
+--- !u!114 &566224495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -567,12 +567,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 71186915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_AssetsPPU: 32
   m_RefResolutionX: 320
   m_RefResolutionY: 180
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -656,17 +660,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &821768079 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4780753020876625069, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-  m_PrefabInstance: {fileID: 320226286}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b82fe8c39cbf64589e29e9190aa401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &905901348
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +857,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectParticles: {fileID: 5157120523809215522, guid: 8953d204cdbb66543be4137b6bab05d2, type: 3}
-  upgradesManager: {fileID: 821768079}
 --- !u!212 &993155697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1555,10 +1547,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.75, y: 3.75}
+    newSize: {x: 3.75, y: 3.75}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -1699,7 +1691,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3898549557557322243, guid: 564d3a0fe7c590e43824d6dadfabde2d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 566224500}
+      addedObject: {fileID: 566224495}
   m_SourcePrefab: {fileID: 100100000, guid: 564d3a0fe7c590e43824d6dadfabde2d, type: 3}
 --- !u!1 &1805432798 stripped
 GameObject:

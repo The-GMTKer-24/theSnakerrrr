@@ -14,9 +14,15 @@ public class TriggerTeleport : MonoBehaviour
     [HideInInspector] public float fadeInTime;
     [HideInInspector] public float fadeOutTime;
     [HideInInspector] public Image blackScreen;
+    [HideInInspector] public PlayerManager playerManager;
     private bool teleporting;
     private float timer;
-    
+
+    private void Awake()
+    {
+        popup.enabled = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
@@ -48,6 +54,8 @@ public class TriggerTeleport : MonoBehaviour
 
     private IEnumerator TeleportPlayer()
     {
+        playerManager.DisableMovement();
+        
         teleporting = true;
         while (timer < fadeInTime)
         {
@@ -67,6 +75,8 @@ public class TriggerTeleport : MonoBehaviour
 
         timer = 0;
         teleporting = false;
+        
+        playerManager.EnableMovement();
     }
 
 }
