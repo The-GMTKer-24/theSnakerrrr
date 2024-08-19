@@ -12,7 +12,7 @@ public class OfficeTeleport : MonoBehaviour
     [SerializeField] private TriggerTeleport officeEntrance;
     [SerializeField] private TriggerTeleport buildingExit;
     [SerializeField] private TriggerTeleport officeExit;
-    
+
     [SerializeField] private AnimationCurve fadeOut;
     [SerializeField] private AnimationCurve fadeIn;
     [SerializeField] private float fadeInTime = 3;
@@ -21,11 +21,6 @@ public class OfficeTeleport : MonoBehaviour
 
     private void Awake()
     {
-        buildingEntrance.newPosition = officeEntrance.transform.position;
-        officeEntrance.newPosition = buildingEntrance.transform.position;
-        buildingExit.newPosition = officeExit.transform.position;
-        officeExit.newPosition = buildingExit.transform.position;
-
         TriggerTeleport[] points = new[] { buildingEntrance, officeEntrance, buildingExit, officeExit };
 
         foreach (TriggerTeleport point in points)
@@ -35,7 +30,13 @@ public class OfficeTeleport : MonoBehaviour
             point.fadeInTime = fadeInTime;
             point.fadeOutTime = fadeOutTime;
             point.blackScreen = blackScreen;
+            point.playerManager = playerManager;
         }
+        
+        buildingEntrance.newPosition = officeEntrance.transform.position;
+        officeEntrance.newPosition = buildingEntrance.transform.position;
+        buildingExit.newPosition = officeExit.transform.position;
+        officeExit.newPosition = buildingExit.transform.position;
     }
 
     private void FixedUpdate()
