@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public float deathShakeTime;
     [SerializeField] public AnimationCurve deathShake;
     [SerializeField] public GameObject upgradeManager;
+    [SerializeField] public PlayerMovement movement;
     [SerializeField] public Upgrades upgrades;
 
     private bool dying;
@@ -28,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     public void Awake()
     {
         Instance = this;
+        EnableMovement();
     }
 
     public void Die()
@@ -80,5 +82,15 @@ public class PlayerManager : MonoBehaviour
             DeadEnemies.Remove(enemy);
         }
         dying = false;
+    }
+
+    public void EnableMovement()
+    {
+        movement.EnableInput();
+    }
+    
+    public void DisableMovement()
+    {
+        movement.DisableInput();
     }
 }

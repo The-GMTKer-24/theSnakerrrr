@@ -21,6 +21,9 @@ public class Projectile : MonoBehaviour
         this.source = source;
         rend.SetPosition(0,transform.position);
         RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position, direction, 1000, hittable);
+
+        bool hitSomething = false;
+
         if (hit.collider != null)
         {
             rend.SetPosition(1, hit.point);
@@ -28,6 +31,7 @@ public class Projectile : MonoBehaviour
             {
                 hit.transform.GetComponent<Enemy>().Die();
                 PlayerShoot.Instance.AddAmmo();
+                hitSomething = true;
             }
             GameObject particles =Instantiate(impactParticles, hit.point, Quaternion.identity);
             Destroy(particles,particleLifeTime);
@@ -48,7 +52,19 @@ public class Projectile : MonoBehaviour
             {
                 hits.transform.GetComponent<Enemy>().Die();
                 PlayerShoot.Instance.AddAmmo();
+                hitSomething = true;
             }
+        }
+
+        if (hitSomething)
+        {
+            Rigidbody2D rb = PlayerManager.Instance.player.GetComponent<Rigidbody2D>();
+
+            if (rb.velocityY < 0)
+            {
+                rb.velocityY *= -1;
+            }
+
         }
         started = true;
     }

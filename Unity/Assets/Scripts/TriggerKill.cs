@@ -16,7 +16,19 @@ public class TriggerKill : MonoBehaviour
             KillPlayer();
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            if (!delayKill)
+            {
+                KillPlayer();
+            }
+        }
+
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))

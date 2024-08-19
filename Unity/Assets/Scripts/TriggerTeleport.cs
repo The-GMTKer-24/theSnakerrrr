@@ -6,30 +6,45 @@ using UnityEngine.UI;
 
 public class TriggerTeleport : MonoBehaviour
 {
-    [SerializeField] private String playerTag = "Player";
-    [SerializeField] private Vector2 newPosition;
-    [SerializeField] private AnimationCurve fadeOut;
-    [SerializeField] private AnimationCurve fadeIn;
-    [SerializeField] private float fadeInTime;
-    [SerializeField] private float fadeOutTime;
-    [SerializeField] private Image blackScreen;
+    [SerializeField] private Renderer popup;
+    [HideInInspector] public String playerTag = "Player";
+    [HideInInspector] public Vector2 newPosition;
+    [HideInInspector] public AnimationCurve fadeOut;
+    [HideInInspector] public AnimationCurve fadeIn;
+    [HideInInspector] public float fadeInTime;
+    [HideInInspector] public float fadeOutTime;
+    [HideInInspector] public Image blackScreen;
+    [HideInInspector] public PlayerManager playerManager;
     private bool teleporting;
     private float timer;
-    private void OnCollisionEnter2D(Collision2D other)
+
+    private void Awake()
     {
-        if (other.collider.CompareTag(playerTag) && !teleporting)
-        {
-            StartCoroutine(TeleportPlayer());        
-        }
+        popup.enabled = false;
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(playerTag) && !teleporting)
+        if (other.CompareTag(playerTag))
+        {
+            popup.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            popup.enabled = false;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag(playerTag) && !teleporting && Input.GetKey(KeyCode.Q))
         {
             StartCoroutine(TeleportPlayer());
         }
-        
     }
 
     private void Start()
@@ -39,6 +54,8 @@ public class TriggerTeleport : MonoBehaviour
 
     private IEnumerator TeleportPlayer()
     {
+        playerManager.DisableMovement();
+        
         teleporting = true;
         while (timer < fadeInTime)
         {
@@ -58,6 +75,8 @@ public class TriggerTeleport : MonoBehaviour
 
         timer = 0;
         teleporting = false;
+        
+        playerManager.EnableMovement();
     }
 
 }
