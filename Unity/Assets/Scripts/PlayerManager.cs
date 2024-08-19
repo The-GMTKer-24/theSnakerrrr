@@ -17,6 +17,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public GameObject playerPrefab;
     [SerializeField] public float deathShakeTime;
     [SerializeField] public AnimationCurve deathShake;
+    [SerializeField] public GameObject upgradeManager;
+    [SerializeField] public Upgrades upgrades;
+
     private bool dying;
     public List<Enemy> DeadEnemies;
 
@@ -42,14 +45,16 @@ public class PlayerManager : MonoBehaviour
         }
 
         Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
+        upgrades = upgradeManager.GetComponent<UpgradesManager>().upgrades;
         Destroy(player);
         camera.GetComponent<CameraShake>().Shake(deathShakeTime, deathShake);
         StartCoroutine(Respawn());
     }
 
-    public void DelayPlayerKill(float time)
+    public void DelayPlayerKill(float time, float gravityIncrease)
     {
         camera.target = null;
+        player.GetComponent<PlayerMovement>().SetGravityMult(gravityIncrease);
         StartCoroutine(DelayKill(time));
     }
 
@@ -64,6 +69,9 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(deathDuration);
         player = Instantiate(playerPrefab, Checkpoints.LastCheckpoint.transform.position, Quaternion.identity);
+        playershoot = player.GetComponent<Player>().playerShoot;
+        upgradeManager = player.GetComponent<Player>().upgradeManager;
+        upgradeManager.GetComponent<UpgradesManager>().upgrades = upgrades;
         camera.target = player.GetComponent<Rigidbody2D>();
         foreach (Enemy enemy in DeadEnemies.ToList())
         {

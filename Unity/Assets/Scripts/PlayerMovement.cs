@@ -41,9 +41,15 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpStartTime;
     private int lastWallJumpDirection;
     private Vector2 inputDirection;
-    
+    private float extGravity;
+
+    public void SetGravityMult(float grav)
+    {
+        extGravity = grav;
+    }
     private void Start()
     {
+        extGravity = 1;
         SetGravity(movementData.GravityScale);
     }
 
@@ -230,8 +236,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetGravity(float gravity)
     {
-
-        rb.gravityScale = gravity;
+        rb.gravityScale = gravity * extGravity;
     }
     
     

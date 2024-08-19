@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 4447723272438016970}
   - component: {fileID: 6386292544238200091}
   - component: {fileID: 6582983166010677251}
+  - component: {fileID: 707707414208577103}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -717,6 +718,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &707707414208577103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466798871195279044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ae82d8fa914c8bae5c466bb14cf5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerShoot: {fileID: 6548670694977657411}
+  upgradeManager: {fileID: 9029059895055752870}
 --- !u!1 &8535892855642654035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5596,9 +5611,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b82fe8c39cbf64589e29e9190aa401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetbootsEnabled: 0
-  grappleEnabled: 0
-  gunEnabled: 0
+  upgrades:
+    laserGun: 0
+    grapplingHook: 0
+    rocketBoots: 0
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
   gunObject: {fileID: 6548670694977657411}
@@ -5913,6 +5929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7305357628792761906, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8011459774815045152, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5920,6 +5940,14 @@ PrefabInstance:
     - target: {fileID: 8240823359422756014, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538147120400802503, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538147120400802503, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3969610848814881147, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}

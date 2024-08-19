@@ -94,3 +94,4 @@ MonoBehaviour:
   playerTag: Player
   delayKill: 1
   timeToDelay: 1
+  gravityIncrease: 4

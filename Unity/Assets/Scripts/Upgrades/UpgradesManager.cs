@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class UpgradesManager : MonoBehaviour
 {
-    [SerializeField] private bool jetbootsEnabled;
-    [SerializeField] private bool grappleEnabled;
-    [SerializeField] private bool gunEnabled;
+    [SerializeField] public Upgrades upgrades;
 
     [SerializeField] private GameObject jetboots;
     [SerializeField] private GameObject grappleHooks;
@@ -28,14 +26,14 @@ public class UpgradesManager : MonoBehaviour
     void RefreshUpgrades()
     {
 
-        jetboots.SetActive(jetbootsEnabled);
-        bootsIcon.SetActive(jetbootsEnabled);
+        jetboots.SetActive(upgrades.rocketBoots);
+        bootsIcon.SetActive(upgrades.rocketBoots);
 
-        grappleHooks.SetActive(grappleEnabled);
-        grappleIcon.SetActive(grappleEnabled);
+        grappleHooks.SetActive(upgrades.grapplingHook);
+        grappleIcon.SetActive(upgrades.grapplingHook);
 
-        gunObject.SetActive(gunEnabled);
-        gunIcon.SetActive(gunEnabled);
+        gunObject.SetActive(upgrades.laserGun);
+        gunIcon.SetActive(upgrades.laserGun);
     }
 
     private void FixedUpdate()
@@ -51,7 +49,7 @@ public class UpgradesManager : MonoBehaviour
         }
 
         PlayerManager.Instance.level1Collectables -= jetbootsPrice;
-        jetbootsEnabled = true;
+        upgrades.rocketBoots = true;
         RefreshUpgrades();
     }
 
@@ -63,13 +61,13 @@ public class UpgradesManager : MonoBehaviour
         }
 
         PlayerManager.Instance.level1Collectables -= grapplePrice;
-        grappleEnabled = true;
+        upgrades.grapplingHook = true;
         RefreshUpgrades();
     }
 
     public void ObtainGun()
     {
-        gunEnabled = true;
+        upgrades.laserGun = true;
         RefreshUpgrades();
     }
 }
