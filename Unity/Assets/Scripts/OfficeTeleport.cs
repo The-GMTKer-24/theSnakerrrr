@@ -25,14 +25,17 @@ public class OfficeTeleport : MonoBehaviour
 
         foreach (TriggerTeleport point in points)
         {
-            point.fadeOut = fadeOut;
-            point.fadeIn = fadeIn;
-            point.fadeInTime = fadeInTime;
-            point.fadeOutTime = fadeOutTime;
-            point.blackScreen = blackScreen;
-            point.playerManager = playerManager;
+            try
+            {
+                point.fadeOut = fadeOut;
+                point.fadeIn = fadeIn;
+                point.fadeInTime = fadeInTime;
+                point.fadeOutTime = fadeOutTime;
+                point.blackScreen = blackScreen;
+                point.playerManager = playerManager;
+            } catch {}
         }
-        
+
         buildingEntrance.newPosition = officeEntrance.transform.position;
         officeEntrance.newPosition = buildingEntrance.transform.position;
         buildingExit.newPosition = officeExit.transform.position;
