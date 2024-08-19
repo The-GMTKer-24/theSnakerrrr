@@ -17,11 +17,12 @@ public class TriggerKill : MonoBehaviour
         }
     }
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
         {
-            KillPlayer();
+            if (PlayerManager.Instance.player.GetComponent<Rigidbody2D>().velocityY <= 0)
+                KillPlayer();
         }
         
     }
