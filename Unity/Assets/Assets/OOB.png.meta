@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d329615f8a7b7224784ae768ce11c5fa
+guid: ac8ddff2fb506d24088eedfd34565c5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4345423661369031782
-    second: Jetpack Bar 1_0
+      213: 6326767898969981531
+    second: OOB_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jetpack Bar 1_0
+      name: OOB_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 200
-        height: 96
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66c7a760ccb0e4c30800000000000000
-      internalID: 4345423661369031782
+      spriteID: b52437a22e13dc750800000000000000
+      internalID: 6326767898969981531
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jetpack Bar 1_0: 4345423661369031782
+      OOB_0: 6326767898969981531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
