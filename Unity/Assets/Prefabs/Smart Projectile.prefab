@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 375384860612158672}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: 73.36835, y: 5.226249, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2946993923621585050}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 6307388972050618870, guid: 10c97664fc9852d4db84e49bee0db75e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   deathParticles: {fileID: 6312313018138299983, guid: f31f3e8ed2945d649b801c06215c234e, type: 3}
   deathParticlesLength: 5
   playerTag: Player
+  real: []
 --- !u!114 &6021484827005257276
 MonoBehaviour:
   m_ObjectHideFlags: 0

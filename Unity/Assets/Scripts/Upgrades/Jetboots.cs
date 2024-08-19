@@ -12,7 +12,6 @@ public class Jetboots : MonoBehaviour
     float jetForce = 5f;
     [SerializeField]
     float maxForce = 15f;
-    [SerializeField] private GameObject bootsUI;
 
     [SerializeField] private float maxFuel = 20f;
     [SerializeField] private float fuelRegenRate = 0.5f;
@@ -31,14 +30,12 @@ public class Jetboots : MonoBehaviour
 
     private void OnEnable()
     {
-        bootsUI.SetActive(true);
         jet.Enable();
     }
 
 
     private void OnDisable()
     {
-        bootsUI.SetActive(false);
         jet.Disable();
     }
 

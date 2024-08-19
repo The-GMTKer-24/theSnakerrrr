@@ -6,21 +6,30 @@ using UnityEngine;
 public class TriggerKill : MonoBehaviour
 {
     [SerializeField] private String playerTag = "Player";
+    [SerializeField] private bool delayKill;
+    [SerializeField] private float timeToDelay;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.CompareTag(playerTag))
         {
-            PlayerManager.Instance.Die();
+            KillPlayer();
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
         {
-            PlayerManager.Instance.Die();
+            KillPlayer();
         }
         
+    }
+    private void KillPlayer()
+    {
+        if (!delayKill)
+            PlayerManager.Instance.Die();
+        else
+            PlayerManager.Instance.DelayPlayerKill(timeToDelay);
     }
 
 }

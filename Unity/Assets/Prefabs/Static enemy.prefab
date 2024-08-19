@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7837406409591191608}
   - component: {fileID: 4278296426312290081}
-  - component: {fileID: 7124340161438406010}
   - component: {fileID: 2482053875236439665}
+  - component: {fileID: 792291369244233896}
   m_Layer: 7
   m_Name: Static enemy
   m_TagString: Enemy
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 6405347700824822528, guid: 401fd1e4796bbc540a8a03b60794c892, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,8 +88,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7124340161438406010
-CircleCollider2D:
+--- !u!114 &2482053875236439665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674004052424310531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e77396cf90549b1b3461e7ba65a548a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticles: {fileID: 6312313018138299983, guid: f31f3e8ed2945d649b801c06215c234e, type: 3}
+  deathParticlesLength: 0.5
+  playerTag: Player
+  real: []
+--- !u!60 &792291369244233896
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,7 +120,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -123,19 +139,26 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &2482053875236439665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3674004052424310531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e77396cf90549b1b3461e7ba65a548a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathParticles: {fileID: 6312313018138299983, guid: f31f3e8ed2945d649b801c06215c234e, type: 3}
-  deathParticlesLength: 0.5
-  playerTag: Player
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.3125, y: 1.0625}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3895483, y: 0.3492154}
+      - {x: -0.47436047, y: 0.23998696}
+      - {x: -0.25089455, y: 0.22399908}
+      - {x: -0.37420082, y: -0.20296544}
+      - {x: -0.46151543, y: -0.37884888}
+      - {x: 0.39439964, y: -0.39229783}
+      - {x: 0.2899084, y: -0.32737923}
+      - {x: 0.16529608, y: -0.25692153}
+      - {x: 0.08474636, y: -0.10768211}
+      - {x: -0.06514454, y: 0.14074397}
+      - {x: -0.21951962, y: 0.38731563}
+  m_UseDelaunayMesh: 0

@@ -10,7 +10,7 @@ namespace DefaultNamespace
         [SerializeField] private float refreshTime;
         [SerializeField] private AnimationCurve popout;
         [SerializeField] private AnimationCurve popin;
-
+        [SerializeField] private float scale;
         private bool active;
         private float timeUntilRefresh;
         private float growTimer;
@@ -19,6 +19,8 @@ namespace DefaultNamespace
         {
             if (other.gameObject.CompareTag(playerTag) && active)
             {
+                if (!PlayerManager.Instance.playershoot)
+                    return;
                 PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().AddAmmo();
                 active = false;
                 timeUntilRefresh = refreshTime;
@@ -31,7 +33,7 @@ namespace DefaultNamespace
             if (!active)
             {
                 shrinkTimer += Time.deltaTime;
-                transform.localScale = new Vector3(popin.Evaluate(shrinkTimer),popin.Evaluate(shrinkTimer),popin.Evaluate(shrinkTimer));
+                transform.localScale = new Vector3(popin.Evaluate(shrinkTimer),popin.Evaluate(shrinkTimer),popin.Evaluate(shrinkTimer)) * scale;
 
                 timeUntilRefresh -= Time.deltaTime;
                 if (timeUntilRefresh < 0)
@@ -43,7 +45,7 @@ namespace DefaultNamespace
             else
             {
                 growTimer += Time.deltaTime;
-                transform.localScale = new Vector3(popout.Evaluate(growTimer), popout.Evaluate(growTimer), popout.Evaluate(growTimer));
+                transform.localScale = new Vector3(popout.Evaluate(growTimer), popout.Evaluate(growTimer), popout.Evaluate(growTimer)) * scale;
             }
         }
     }

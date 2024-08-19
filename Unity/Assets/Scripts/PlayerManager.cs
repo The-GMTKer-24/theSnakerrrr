@@ -20,6 +20,8 @@ public class PlayerManager : MonoBehaviour
     private bool dying;
     public List<Enemy> DeadEnemies;
 
+    private bool willDie;
+    
     public void Awake()
     {
         Instance = this;
@@ -29,6 +31,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (dying)
             return;
+        willDie = false;
         dying = true;
         if (Bullet.bullets != null)
         {
@@ -44,6 +47,19 @@ public class PlayerManager : MonoBehaviour
         StartCoroutine(Respawn());
     }
 
+    public void DelayPlayerKill(float time)
+    {
+        camera.target = null;
+        StartCoroutine(DelayKill(time));
+    }
+
+    private IEnumerator DelayKill(float time)
+    {
+        willDie = true;
+        yield return new WaitForSeconds(time);
+        if (willDie)
+            Die();
+    }
     private IEnumerator Respawn()
     {
         yield return new WaitForSeconds(deathDuration);

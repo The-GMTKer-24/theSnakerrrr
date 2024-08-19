@@ -74,11 +74,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1440529245
+  m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.9254902, g: 0.06534538, b: 0, a: 1}
+  m_Sprite: {fileID: 1911957382030681454, guid: 401fd1e4796bbc540a8a03b60794c892, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,8 +125,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5625, y: 1.0625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -134,9 +134,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: -0.055262566, y: -0.14950871}
+      - {x: 0.16035748, y: 0.07314825}
+      - {x: 0.3089857, y: -0.08561337}
+      - {x: 0.5149374, y: -0.09130663}
+      - {x: 0.65895176, y: -0.33867705}
+      - {x: 0.63023186, y: 0.11532009}
+      - {x: 0.6226282, y: 0.38525063}
+      - {x: 0.10687637, y: 0.3876018}
+      - {x: -0.030208588, y: 0.03358805}
+      - {x: -0.25086784, y: -0.006134689}
+      - {x: -0.2873783, y: 0.13842428}
+      - {x: -0.47468185, y: 0.061989903}
+      - {x: -0.5881548, y: -0.07166916}
+      - {x: -0.27983475, y: -0.12591863}
   m_UseDelaunayMesh: 0
 --- !u!114 &2278434612409493102
 MonoBehaviour:
@@ -153,6 +164,7 @@ MonoBehaviour:
   deathParticles: {fileID: 6312313018138299983, guid: f31f3e8ed2945d649b801c06215c234e, type: 3}
   deathParticlesLength: 5
   playerTag: Player
+  real: []
   enemyProjectilePrefab: {fileID: 375384860612158672, guid: f747de723b4d8c24794fe60cc6c47ae8, type: 3}
   shotDelay: 1
   hittable:
