@@ -6,13 +6,13 @@ using UnityEngine;
 public class LaserPickuip : MonoBehaviour
 {
     [SerializeField] private GameObject collectParticles;
-    [SerializeField] private UpgradesManager upgradesManager;
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("collided");
             Instantiate(collectParticles, transform.position, Quaternion.identity);
-            upgradesManager.ObtainGun();
+            PlayerManager.Instance.upgradeManager.GetComponent<UpgradesManager>().ObtainGun();
             Destroy(gameObject);
         }
     }
