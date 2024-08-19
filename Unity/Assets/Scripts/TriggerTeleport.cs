@@ -17,7 +17,12 @@ public class TriggerTeleport : MonoBehaviour
     [HideInInspector] public PlayerManager playerManager;
     private bool teleporting;
     private float timer;
-    
+
+    private void Awake()
+    {
+        popup.enabled = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
