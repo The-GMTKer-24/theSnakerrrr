@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      extraOfficeAssets_0: 1048732421825562133
+      extraOfficeAssets_1: -4839334937660794733
+      extraOfficeAssets_2: 1964286883941541865
+      extraOfficeAssets_3: 2656465821336699624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
