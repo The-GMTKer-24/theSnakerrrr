@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 68d11b9400a940dd3b158a08f00ee599
+guid: 9cfa0778dae10fc17af7516c3c46a2a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1048732421825562133
-    second: extraOfficeAssets_0
-  - first:
-      213: -4839334937660794733
-    second: extraOfficeAssets_1
-  - first:
-      213: 1964286883941541865
-    second: extraOfficeAssets_2
-  - first:
-      213: 2656465821336699624
-    second: extraOfficeAssets_3
+      213: 1464435051578119721
+    second: shitcarpet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: extraOfficeAssets_0
+      name: shitcarpet_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 38
-        width: 16
-        height: 21
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,71 +114,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 516095bc498dd8e00800000000000000
-      internalID: 1048732421825562133
+      spriteID: 926d1f5abe7b25410800000000000000
+      internalID: 1464435051578119721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extraOfficeAssets_1
+      name: shitcarpet_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 31
-        width: 33
-        height: 33
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 398579b938a37dcb0800000000000000
-      internalID: -4839334937660794733
+      spriteID: 9a1ed8b36343af97a8ce716e8f0e2ace
+      internalID: -1800915439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extraOfficeAssets_2
+      name: shitcarpet_2
       rect:
         serializedVersion: 2
-        x: 10
-        y: 16
-        width: 11
-        height: 11
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e76b42838c824b10800000000000000
-      internalID: 1964286883941541865
+      spriteID: c64d678b0dc158016b3dda94b5f53f2b
+      internalID: -966671655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: extraOfficeAssets_3
+      name: shitcarpet_3
       rect:
         serializedVersion: 2
-        x: 42
-        y: 16
-        width: 11
-        height: 11
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8e28db60799add420800000000000000
-      internalID: 2656465821336699624
+      spriteID: dd8282cb410c3748f838463aff9154b8
+      internalID: -1785918991
       vertices: []
       indices: 
       edges: []
@@ -195,7 +186,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ceba959e9c471cfd88be35f365086f15
     internalID: 0
     vertices: []
     indices: 
@@ -203,10 +194,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      extraOfficeAssets_0: 1048732421825562133
-      extraOfficeAssets_1: -4839334937660794733
-      extraOfficeAssets_2: 1964286883941541865
-      extraOfficeAssets_3: 2656465821336699624
+      shitcarpet_0: 1464435051578119721
+      shitcarpet_1: -1800915439
+      shitcarpet_2: -966671655
+      shitcarpet_3: -1785918991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
