@@ -11,6 +11,9 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private int maxAmmo;
     [SerializeField] private float shakeTime;
     [SerializeField] private AnimationCurve shakeIntensity;
+    [SerializeField] private GameObject ammonIcon1;
+    [SerializeField] private GameObject ammonIcon2;
+
     public int ammo;
     private InputMap inputMap;
     private InputAction shoot;
@@ -64,6 +67,25 @@ public class PlayerShoot : MonoBehaviour
         }
     }
 
+    private void UpdateAmmo()
+    {
+        ammonIcon1.SetActive(false);
+        ammonIcon2.SetActive(false);
+        if (ammo > 0)
+        {
+            ammonIcon1.SetActive(true);
+        }
+        if (ammo > 1)
+        {
+            ammonIcon2.SetActive(true);
+        }
+    }
+
+    private void Update()
+    {
+        UpdateAmmo();
+    }
+
     private void OnShootButton(InputAction.CallbackContext obj)
     {
         if (ammo < 1)
@@ -71,6 +93,8 @@ public class PlayerShoot : MonoBehaviour
             return;
         }
         ammo--;
+        UpdateAmmo();
+
         Vector3 mousePosition = PlayerManager.Instance.mouseCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
         PlayerManager.Instance.camera.GetComponent<CameraShake>().Shake(shakeTime, shakeIntensity);
         Vector2 delta = transform.position - mousePosition;

@@ -15,6 +15,11 @@ public class UpgradesManager : MonoBehaviour
 
     [SerializeField] public int grapplePrice;
     [SerializeField] public int jetbootsPrice;
+
+    [SerializeField] private GameObject grappleIcon;
+    [SerializeField] private GameObject bootsIcon;
+    [SerializeField] private GameObject gunIcon;
+
     void Start()
     {
         RefreshUpgrades();
@@ -24,8 +29,13 @@ public class UpgradesManager : MonoBehaviour
     {
 
         jetboots.SetActive(jetbootsEnabled);
+        bootsIcon.SetActive(jetbootsEnabled);
+
         grappleHooks.SetActive(grappleEnabled);
+        grappleIcon.SetActive(grappleEnabled);
+
         gunObject.SetActive(gunEnabled);
+        gunIcon.SetActive(gunEnabled);
     }
 
     private void FixedUpdate()
