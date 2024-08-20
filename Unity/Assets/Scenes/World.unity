@@ -665,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: fadeInTime
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: officeExit
@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 719172829}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: fadeOutTime
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: buildingExit
@@ -951,9 +951,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
+      propertyPath: fadeInTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 719172829}
+    - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
+      propertyPath: fadeOutTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
       propertyPath: buildingExit
       value: 
@@ -4111,9 +4119,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
+      propertyPath: fadeInTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 719172829}
+    - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
+      propertyPath: fadeOutTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
       propertyPath: buildingExit
       value: 
@@ -6764,6 +6780,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1160936961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160936964}
+  - component: {fileID: 1160936963}
+  - component: {fileID: 1160936962}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1160936962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160936961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ff5b990beb87edc90247e953424887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+--- !u!61 &1160936963
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160936961}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1160936964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160936961}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 505, y: 442, z: 0}
+  m_LocalScale: {x: 2000, y: 1500, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1169536025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10944,6 +11052,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3886940304591736160, guid: 81e93e6354f7f9f419af9c7eff18ffa4, type: 3}
+      propertyPath: m_Color.a
+      value: 0.41568628
+      objectReference: {fileID: 0}
     - target: {fileID: 5734505276429998874, guid: 81e93e6354f7f9f419af9c7eff18ffa4, type: 3}
       propertyPath: m_Name
       value: BuildingExterior
@@ -11034,3 +11146,4 @@ SceneRoots:
   - {fileID: 129035341}
   - {fileID: 1939600607}
   - {fileID: 362382872}
+  - {fileID: 1160936964}
