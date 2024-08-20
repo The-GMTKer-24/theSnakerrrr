@@ -30,13 +30,25 @@ public class PlayerManager : MonoBehaviour
     public List<Enemy> DeadEnemies;
 
     private bool willDie;
-    
+
+    private StatPasser passer;
     public void Awake()
     {
-        DontDestroyOnLoad(this);
         Instance = this;
         deathCount = 0;
         speedrunTime = 0;
+        passer = (new GameObject("Stat passer")).AddComponent<StatPasser>();
+
+    }
+
+    public void OnDisable()
+    {
+
+    }
+
+    public void OnDestroy()
+    {
+
     }
 
     private void Update()
@@ -46,7 +58,10 @@ public class PlayerManager : MonoBehaviour
             Player component = player.GetComponent<Player>();
             if (component.timer)
                 speedrunTime = component.timer.GetComponent<Clock>().GetTime();
+
         }
+        passer.time = speedrunTime;
+        passer.deaths = deathCount;
     }
 
     public void Die()
@@ -65,11 +80,13 @@ public class PlayerManager : MonoBehaviour
 
         // Update death count and time counter
         deathCount++;
-        
-        Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
+
+        GameObject particles = Instantiate(deathParticles, player.transform.position, Quaternion.identity);
+        Destroy(particles,5);
         upgrades = upgradeManager.GetComponent<UpgradesManager>().upgrades;
         Destroy(player);
-        camera.GetComponent<CameraShake>().Shake(deathShakeTime, deathShake);
+        if (camera)
+            camera.GetComponent<CameraShake>().Shake(deathShakeTime, deathShake);
         StartCoroutine(Respawn());
     }
 

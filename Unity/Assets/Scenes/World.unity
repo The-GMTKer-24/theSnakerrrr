@@ -7509,13 +7509,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: upgrades.laserGun
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: upgrades.rocketBoots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: upgrades.grapplingHook
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.5
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 237.1
+      value: 299.8
       objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.z

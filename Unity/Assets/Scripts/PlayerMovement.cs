@@ -244,10 +244,14 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnJumpUp(InputAction.CallbackContext obj)
     {
-        if (CanShortJump() || CanShortWallJump())
+        if (this.gameObject)
         {
-            isJumpShort = true;
+            if (CanShortJump() || CanShortWallJump())
+            {
+                isJumpShort = true;
+            }
         }
+
     }
 
     private void OnJumpDown(InputAction.CallbackContext obj)

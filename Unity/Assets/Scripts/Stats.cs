@@ -12,9 +12,9 @@ public class Stats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time.SetText($"{TimeSpan.FromSeconds(PlayerManager.Instance.speedrunTime):h\\:mm\\:ss\\.fff}");
-        deaths.SetText($"{TimeSpan.FromSeconds(PlayerManager.Instance.deathCount):h\\:mm\\:ss\\.fff}");
-
+        time.SetText($"{TimeSpan.FromSeconds(StatPasser.Instance.time):h\\:mm\\:ss\\.f}");
+        deaths.SetText($"Deaths: {StatPasser.Instance.deaths}");
+        Destroy(StatPasser.Instance.gameObject);
     }
 
     // Update is called once per frame
