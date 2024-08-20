@@ -5683,7 +5683,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 136
   ropeLength: 10
-  ropeDistance: 40
+  ropeDistance: 20
   lineRenderer: {fileID: 8061377098848638736}
   distanceJoint: {fileID: 4447723272438016970}
 --- !u!120 &8061377098848638736
