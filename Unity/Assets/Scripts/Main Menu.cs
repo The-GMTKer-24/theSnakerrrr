@@ -9,12 +9,20 @@ public class MainMenu : MonoBehaviour
 {
     public void LoadLevel(String level)
     {
+        if (PlayerManager.Instance)
+        {
+            Destroy(PlayerManager.Instance);
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene(level);
     }
     
     public void ExitGame()
     {
+        if (PlayerManager.Instance)
+        {
+            Destroy(PlayerManager.Instance);
+        }
         #if UNITY_STANDALONE
         Application.Quit();
         #endif
