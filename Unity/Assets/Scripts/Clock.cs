@@ -16,6 +16,8 @@ public class Clock : MonoBehaviour
     public void Update()
     {
         time += Time.deltaTime;
-        text.SetText($"{time}");
+        TimeSpan formattedTime = TimeSpan.FromSeconds(time);
+        
+        text.SetText($"{formattedTime:mm\\:ss\\.fff}");
     }
 }
