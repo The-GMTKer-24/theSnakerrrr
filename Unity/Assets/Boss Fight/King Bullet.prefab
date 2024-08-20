@@ -136,7 +136,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -172,6 +172,7 @@ MonoBehaviour:
   deathParticlesLength: 5
   playerTag: Player
   real: []
+  permadeath: 0
 --- !u!114 &6021484827005257276
 MonoBehaviour:
   m_ObjectHideFlags: 0
