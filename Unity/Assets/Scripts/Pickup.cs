@@ -12,7 +12,7 @@ namespace DefaultNamespace
         [SerializeField] private AnimationCurve popin;
         [SerializeField] private float scale;
         private bool active;
-        private float timeUntilRefresh;
+        public float timeUntilRefresh;
         private float growTimer;
         private float shrinkTimer;
         public void OnTriggerEnter2D(Collider2D other)

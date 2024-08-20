@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DefaultNamespace;
 using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
@@ -56,7 +57,7 @@ public class SnakeKing : SmartShooter
     public override void Die()
     {
         health--;
-
+        RefreshBullet();
         slider.value = (float)health / maxHealth;
         PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().ammo--;
         if (health <= 0)
