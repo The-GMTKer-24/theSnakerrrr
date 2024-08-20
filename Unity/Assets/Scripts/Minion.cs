@@ -11,7 +11,8 @@ public class Minion : Enemy
     private float lastColision;
     public override void Die()
     {
-        Destroy(Instantiate(deathParticles,transform.position,Quaternion.identity),deathParticlesLength);
+        GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
+        Destroy(particles,deathParticlesLength);
         Destroy(this.gameObject);
     }
 

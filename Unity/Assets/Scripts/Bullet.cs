@@ -27,7 +27,8 @@ public class Bullet : MonoBehaviour
 
     public void Splode()
     {
-        Destroy(Instantiate(particleSystem,transform.position,quaternion.identity),duration);
+        GameObject particle = Instantiate(particleSystem, transform.position, quaternion.identity);
+        Destroy(particle,duration);
         Destroy(this.gameObject);
         bullets.Remove(this);
     }

@@ -15,7 +15,8 @@ public class Enemy : MonoBehaviour
 
     public virtual void Die()
     {
-        Destroy(Instantiate(deathParticles,transform.position,quaternion.identity),deathParticlesLength);
+        GameObject particles = Instantiate(deathParticles, transform.position, quaternion.identity);
+        Destroy(particles, deathParticlesLength);
         PlayerManager.Instance.DeadEnemies.Add(this);
         this.gameObject.SetActive(false);
         if (permadeath)

@@ -26,7 +26,8 @@ public class SnakeKing : SmartShooter
     private List<GameObject> snakes;
     private GameObject currentRefresh;
     private float timer;
-    
+
+    private bool won;
     public void Awake()
     {
         snakes = new List<GameObject>();
@@ -37,6 +38,10 @@ public class SnakeKing : SmartShooter
 
     public void FixedUpdate()
     {
+        if (won)
+        {
+            return;
+        }
         timer += Time.fixedDeltaTime;
 
         if (timer > timeBetweenSpawns)
@@ -62,17 +67,21 @@ public class SnakeKing : SmartShooter
         PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().ammo--;
         if (health <= 0)
         {
+            won = true;
             Debug.Log("dying");
-            Destroy(Instantiate(deathParticles,transform.position,Quaternion.identity),deathParticlesLength);
-            Destroy(this.gameObject);
             StartCoroutine(Win());
+            GameObject particles = Instantiate(deathParticles,transform.position,Quaternion.identity);
+            Destroy(particles,deathParticlesLength);
+
         }
     }
 
     private IEnumerator Win()
     {
+        Debug.Log("Winning");
         yield return new WaitForSeconds(timeToWait);
-        SceneManager.LoadScene(sceneToLoad);
+        StatPasser.Instance.Nuke(0.1f,sceneToLoad);
+
     }
 
     public new void OnDestroy()
