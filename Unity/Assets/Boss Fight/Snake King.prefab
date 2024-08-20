@@ -329,8 +329,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   projSpeed: 30
-  maxHealth: 20
-  health: 20
+  maxHealth: 3
+  health: 3
   slider: {fileID: 4518507600192409274}
   minionSpawnLocations:
   - {fileID: 2396702851945281727}

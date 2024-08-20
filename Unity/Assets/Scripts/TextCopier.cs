@@ -8,7 +8,7 @@ public class TextCopier : MonoBehaviour
     [SerializeField] private TMP_Text originalText;
     [SerializeField] private TMP_Text copyText;
 
-    private void Update()
+    private void LateUpdate()
     {
         // Copy the text from the original onto the copy
         copyText.text = originalText.text;
