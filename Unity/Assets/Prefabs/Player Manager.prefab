@@ -44,9 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ba7031d6b445a7b256f64632de39aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1Collectables: 0
+  playershoot: {fileID: 0}
   deathParticles: {fileID: 505258978817807498, guid: d149425dc9c0cd343af768c4ecdd44d1, type: 3}
   deathDuration: 1
   camera: {fileID: 0}
+  mouseCamera: {fileID: 0}
   player: {fileID: 0}
   playerPrefab: {fileID: 8466798871195279044, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
   deathShakeTime: 1
@@ -83,3 +86,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  upgradeManager: {fileID: 0}
+  movement: {fileID: 0}
+  upgrades:
+    laserGun: 0
+    grapplingHook: 0
+    rocketBoots: 0
+  DeadEnemies: []
