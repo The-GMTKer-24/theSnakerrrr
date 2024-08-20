@@ -11,8 +11,8 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] private GameObject grappleHooks;
     [SerializeField] private GameObject gunObject;
 
-    [SerializeField] public int grapplePrice = 4;
-    [SerializeField] public int jetbootsPrice = 5;
+    [SerializeField] public int grapplePrice = 5;
+    [SerializeField] public int jetbootsPrice = 4;
 
     [SerializeField] private GameObject grappleIcon;
     [SerializeField] private GameObject bootsIcon;
