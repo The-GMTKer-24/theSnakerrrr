@@ -5620,12 +5620,12 @@ MonoBehaviour:
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
   gunObject: {fileID: 6548670694977657411}
-  grapplePrice: 1
+  grapplePrice: 2
   jetbootsPrice: 2
   grappleIcon: {fileID: 198960542079026775}
   bootsIcon: {fileID: 5120517599120264903}
   gunIcon: {fileID: 1979643780612990484}
-  gunOverlay: {fileID: 137725032724545062}
+  gunOverlay: {fileID: 1745269466901458022}
   jetpacjOverlay: {fileID: 5779009483203187803}
 --- !u!1 &9164895370532238614
 GameObject:
@@ -6005,6 +6005,11 @@ MonoBehaviour:
 --- !u!1 &790716823633083920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4587974283724211321, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+  m_PrefabInstance: {fileID: 3842400130016836201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1745269466901458022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3272573052125074959, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
   m_PrefabInstance: {fileID: 3842400130016836201}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1979643780612990484 stripped
