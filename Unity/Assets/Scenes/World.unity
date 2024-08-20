@@ -665,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: fadeInTime
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: officeExit
@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 719172829}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: fadeOutTime
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8175931429481470127, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: buildingExit
@@ -951,9 +951,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
+      propertyPath: fadeInTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 719172829}
+    - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
+      propertyPath: fadeOutTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6995472814177128906, guid: f77777d25e77bdfc8af69c80b927a77f, type: 3}
       propertyPath: buildingExit
       value: 
@@ -4044,9 +4052,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
+      propertyPath: fadeInTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 719172829}
+    - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
+      propertyPath: fadeOutTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1656492577848026662, guid: bfe02ea1446da4748aaec05d83e0b758, type: 3}
       propertyPath: buildingExit
       value: 
