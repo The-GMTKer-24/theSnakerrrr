@@ -28,6 +28,6 @@ public class Clock : MonoBehaviour
         time += Time.deltaTime;
         TimeSpan formattedTime = TimeSpan.FromSeconds(time);
         
-        text.SetText($"{formattedTime:mm\\:ss\\.fff}");
+        text.SetText($"{formattedTime:h\\:mm\\:ss\\.fff}");
     }
 }

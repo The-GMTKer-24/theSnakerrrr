@@ -5625,7 +5625,7 @@ MonoBehaviour:
   grappleIcon: {fileID: 198960542079026775}
   bootsIcon: {fileID: 5120517599120264903}
   gunIcon: {fileID: 1979643780612990484}
-  gunOverlay: {fileID: 0}
+  gunOverlay: {fileID: 137725032724545062}
   jetpacjOverlay: {fileID: 5779009483203187803}
 --- !u!1 &9164895370532238614
 GameObject:
