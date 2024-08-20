@@ -35,32 +35,6 @@ public class StatPasser : MonoBehaviour
             Destroy(objec);
         }
         yield return new WaitForSeconds(timeToWait);
-        foreach (var objec in GameObject.FindGameObjectsWithTag("Untagged"))
-        {
-            Destroy(objec);
-        }
-        foreach (var objec in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            if (objec == this.gameObject)
-            {
-                continue;
-            }
-            Destroy(objec);
-        }
-        yield return new WaitForSeconds(timeToWait);
-        foreach (var objec in GameObject.FindGameObjectsWithTag("Untagged"))
-        {
-            Destroy(objec);
-        }
-        foreach (var objec in GameObject.FindGameObjectsWithTag("Enemy"))
-        {
-            if (objec == this.gameObject)
-            {
-                continue;
-            }
-            Destroy(objec);
-        }
-        yield return new WaitForSeconds(timeToWait);
         SceneManager.LoadScene(sceneToLoad);
     }
 }
