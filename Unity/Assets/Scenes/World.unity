@@ -607,6 +607,10 @@ PrefabInstance:
       propertyPath: permadeath
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3252178874242747194, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3373048892276603443, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_Data
       value: 
@@ -673,6 +677,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5511307853627250301, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676068868939573662, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7408421613091944222, guid: 5270078f8019eb8b787f13736b620ea5, type: 3}
@@ -1944,7 +1952,7 @@ Transform:
   m_GameObject: {fileID: 346458601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.52791, y: 4.776903, z: 2.4727216}
+  m_LocalPosition: {x: 13.52791, y: 4.776903, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
