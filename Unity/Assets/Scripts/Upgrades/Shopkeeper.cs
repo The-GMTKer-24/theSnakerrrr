@@ -9,6 +9,9 @@ public class Shopkeeper : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (PlayerManager.Instance)
+                if (PlayerManager.Instance.playershoot)
+                    PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().temporarilyDisabled = true;
             overlay.SetActive(true);
         }
     }
@@ -17,6 +20,9 @@ public class Shopkeeper : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (PlayerManager.Instance)
+                if (PlayerManager.Instance.playershoot)
+                    PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().temporarilyDisabled = false;
             overlay.SetActive(false);
         }
     }

@@ -13,14 +13,21 @@ public class MenuMaker : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             paused = !paused;
-            Time.timeScale = paused ? 0 : 1;
-            menu.gameObject.SetActive(paused);
+            SetupPause();
         }
     }
 
     public void Resume()
     {
         paused = false;
+        SetupPause();
+    }
+
+    public void SetupPause()
+    {
+        if (PlayerManager.Instance)
+            if (PlayerManager.Instance.playershoot)
+                PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().temporarilyDisabled = paused;
         Time.timeScale = paused ? 0 : 1;
         menu.gameObject.SetActive(paused);
     }
