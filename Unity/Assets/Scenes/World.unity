@@ -7341,6 +7341,14 @@ PrefabInstance:
       propertyPath: upgrades.grapplingHook
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5252228225430154845, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252228225430154845, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.046
+      objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38
@@ -7386,7 +7394,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1875704581130377460, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
