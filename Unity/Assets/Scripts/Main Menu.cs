@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerManager.Instance)
         {
-            Destroy(PlayerManager.Instance);
+            Destroy(PlayerManager.Instance.gameObject);
         }
         Time.timeScale = 1;
         SceneManager.LoadScene(level);

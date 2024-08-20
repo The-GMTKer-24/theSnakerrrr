@@ -51,7 +51,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
-        if (dying)
+        if (dying || !Instance)
             return;
         willDie = false;
         dying = true;
