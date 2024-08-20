@@ -7,6 +7,7 @@ public class StatPasser : MonoBehaviour
 {
     public static StatPasser Instance;
     public int deaths;
+    public int scales;
     public float time;
 
     public void Awake()

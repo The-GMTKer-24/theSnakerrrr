@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
 
     public int deathCount;
     public float speedrunTime;
+    public int maxCollected;
     
     private bool dying;
     public List<Enemy> DeadEnemies;
@@ -60,8 +61,11 @@ public class PlayerManager : MonoBehaviour
                 speedrunTime = component.timer.GetComponent<Clock>().GetTime();
 
         }
+
+        maxCollected = Math.Max(maxCollected, level1Collectables);
         passer.time = speedrunTime;
         passer.deaths = deathCount;
+        passer.scales = maxCollected;
     }
 
     public void Die()
