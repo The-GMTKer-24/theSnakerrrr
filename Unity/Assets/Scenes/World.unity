@@ -6062,11 +6062,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3102607637590288694, guid: 0947785d6483b3c478f8368a5f053494, type: 3}
   m_PrefabInstance: {fileID: 913872499}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1063611735 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1745269466901458022, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-  m_PrefabInstance: {fileID: 1227353126}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1072388322
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,49 +7509,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 969677527342892462, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2573463926026678297, guid: 2a8287ee237aaa449b4aa0005c7a6a9e, type: 3}
-    - target: {fileID: 1745269466901458022, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: gunOverlay
-      value: 
-      objectReference: {fileID: 1063611735}
-    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: grapplePrice
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: upgrades.laserGun
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: upgrades.rocketBoots
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971911061747009858, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: upgrades.grapplingHook
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.9
-      objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53
+      value: 53.5
       objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53
+      value: 237.1
       objectReference: {fileID: 0}
     - target: {fileID: 5294337534224250301, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
       propertyPath: m_LocalPosition.z

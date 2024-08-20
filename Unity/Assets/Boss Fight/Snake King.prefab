@@ -323,6 +323,7 @@ MonoBehaviour:
   deathParticlesLength: 20
   playerTag: Player
   real: []
+  permadeath: 0
   enemyProjectilePrefab: {fileID: 375384860612158672, guid: 6b2254a63b8e5424c887b4140eea6a3e, type: 3}
   shotDelay: 1
   hittable:
@@ -345,8 +346,8 @@ MonoBehaviour:
   - {fileID: 1322290544460443210}
   refresh: {fileID: 5854078056584013565, guid: 36eb836f60a50f4418d2b44e438c0812, type: 3}
   minion: {fileID: 4247586889289734896, guid: b0ec9e1b33fec0640b1ba54e988ea8ae, type: 3}
-  sceneToLoad: 
-  timeToWait: 0
+  sceneToLoad: Win
+  timeToWait: 5
 --- !u!1 &2137513730333442387
 GameObject:
   m_ObjectHideFlags: 0
