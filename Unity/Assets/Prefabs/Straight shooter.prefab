@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb894d8320548859d3add42db478c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticles: {fileID: 6312313018138299983, guid: 915ca838f7cc98949ae4e2f40acb273b, type: 3}
+  deathParticles: {fileID: 505258978817807498, guid: aae0467ea9398214ea12743fea82a7d3, type: 3}
   deathParticlesLength: 10
   playerTag: Player
   real: []
