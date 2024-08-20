@@ -9,7 +9,9 @@ public class SnakeKingTrigger : MonoBehaviour
     [SerializeField] private AudioSource ambientMusic;
     [SerializeField] private AudioSource fightMusic;
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    { 
+        if (SnakeKing.Instance)
+            return;
         if (SnakeKing.Instance == null)
             Instantiate(snakeKing, spawnLocation.position, quaternion.identity);
 
@@ -18,6 +20,17 @@ public class SnakeKingTrigger : MonoBehaviour
         if (!fightMusic.isPlaying)
         {
             fightMusic.Play();
+        }
+    }
+
+    private void Update()
+    {
+        if (!SnakeKing.Instance)
+        {
+            if (!ambientMusic.isPlaying)
+                ambientMusic.Play();
+            if (fightMusic.isPlaying)
+                fightMusic.Stop();
         }
     }
 }
