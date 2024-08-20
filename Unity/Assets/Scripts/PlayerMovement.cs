@@ -24,18 +24,18 @@ public class PlayerMovement : MonoBehaviour
     private InputMap map;
     private InputAction jump;
 
-    public bool FacingRight { get; private set; }
-    public bool Jumping { get; private set; }
-    public bool WallJumping { get; private set; }
-    public bool Sliding { get; private set; }
-    
-    
-    
-    public float LastGroundTime { get; private set; }
-    public float LastWallTime { get; private set; }
-    public float LastWallRightTime { get; private set; }
-    public float LastWallLeftTime { get; private set; }
-    public float LastPressedJumpTime { get; private set; }
+    public bool FacingRight { get;  set; }
+    public bool Jumping { get;  set; }
+    public bool WallJumping { get;  set; }
+    public bool Sliding { get;  set; }
+
+
+
+    public float LastGroundTime;
+    public float LastWallTime ;
+    public float LastWallRightTime ;
+    public float LastWallLeftTime ;
+    public float LastPressedJumpTime ;
 
     private bool isJumpShort;
     private bool isFalling;
@@ -244,7 +244,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnJumpUp(InputAction.CallbackContext obj)
     {
-        if (this.gameObject)
+        if (this)
         {
             if (CanShortJump() || CanShortWallJump())
             {
@@ -352,6 +352,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnDisable()
+    {
+        DisableInput();
+    }
+
+    private void OnDestroy()
     {
         DisableInput();
     }
