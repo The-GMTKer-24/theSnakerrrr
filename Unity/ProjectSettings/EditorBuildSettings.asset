@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: 34cd4badc6f0e104497785dfbc4ffed8
+  - enabled: 1
+    path: Assets/Scenes/B-Side.unity
+    guid: f1b8529390f0d3347ad54505aefc8df1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
