@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float deathParticlesLength;
     [SerializeField] protected string playerTag = "Player";
     [SerializeField] private List<Enemy> real;
+    [SerializeField] private bool permadeath = false;
 
 
 
@@ -17,6 +18,10 @@ public class Enemy : MonoBehaviour
         Destroy(Instantiate(deathParticles,transform.position,quaternion.identity),deathParticlesLength);
         PlayerManager.Instance.DeadEnemies.Add(this);
         this.gameObject.SetActive(false);
+        if (permadeath)
+        {
+            Destroy(this);
+        }
     }
 
     public void OnDestroy()
