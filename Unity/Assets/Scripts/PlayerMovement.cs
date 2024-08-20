@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public float LastPressedJumpTime { get; private set; }
 
     private bool isJumpShort;
-    private bool isFalling;
+    [HideInInspector] public bool isFalling;
     private float wallJumpStartTime;
     private int lastWallJumpDirection;
     private Vector2 inputDirection;

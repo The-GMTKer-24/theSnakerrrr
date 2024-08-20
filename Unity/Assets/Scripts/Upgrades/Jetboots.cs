@@ -13,6 +13,8 @@ public class Jetboots : MonoBehaviour
     [SerializeField]
     float maxForce = 15f;
 
+    [SerializeField] private PlayerMovement playerMovement;
+
     [SerializeField] private float maxFuel = 20f;
     [SerializeField] private float fuelRegenRate = 0.5f;
     [SerializeField] private Slider slider;
@@ -41,7 +43,7 @@ public class Jetboots : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (jet.IsPressed() && (currentFuel > fuelRequirement || jetting) && (currentFuel > 0))
+        if (jet.IsPressed() && (currentFuel > fuelRequirement || playerMovement.isFalling || jetting) && (currentFuel > 0))
         {
             OnJetButton();
         }
