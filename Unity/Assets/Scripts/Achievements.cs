@@ -9,6 +9,10 @@ public static class Achievements
     public static bool Collector = false;
     public static bool Cheater = false;
     public static bool Speedrun = false;
+    
+    private const int MINSCALES = 9;
+    private const int MAXSCALES = 12;
+    private const int TIMESECONDS = 480;
 
     public static void GetCollector()
     {
@@ -27,6 +31,19 @@ public static class Achievements
 
     public static void Evaluate(StatPasser stats)
     {
-        
+        if (stats.scales == MAXSCALES)
+        {
+            GetCollector();
+        }
+
+        if (stats.scales < MINSCALES)
+        {
+            GetCheater();
+        }
+
+        if (stats.time <= TIMESECONDS)
+        {
+            GetSpeedrun();
+        }
     }
 }
