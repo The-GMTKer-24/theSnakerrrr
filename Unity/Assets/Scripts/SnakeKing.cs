@@ -59,6 +59,12 @@ public class SnakeKing : SmartShooter
         }
     }
 
+    public void Update()
+    {
+        if (!won)
+            base.Update();
+    }
+
     public override void Die()
     {
         health--;

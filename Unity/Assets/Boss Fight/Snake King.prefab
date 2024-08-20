@@ -325,13 +325,13 @@ MonoBehaviour:
   real: []
   permadeath: 0
   enemyProjectilePrefab: {fileID: 375384860612158672, guid: 6b2254a63b8e5424c887b4140eea6a3e, type: 3}
-  shotDelay: 1
+  shotDelay: 4
   hittable:
     serializedVersion: 2
     m_Bits: 64
   projSpeed: 30
-  maxHealth: 5
-  health: 5
+  maxHealth: 8
+  health: 8
   slider: {fileID: 4518507600192409274}
   minionSpawnLocations: []
   timeBetweenSpawns: 5
