@@ -5874,6 +5874,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8204196449103824672, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -285568297045168473, guid: 63b92c4e5c561164eb513fc0e41723a9, type: 3}
     - target: {fileID: 8240823359422756014, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5886,6 +5890,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8724465023439156820, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -285568297045168473, guid: 63b92c4e5c561164eb513fc0e41723a9, type: 3}
     m_RemovedComponents:
     - {fileID: 3969610848814881147, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}
     - {fileID: 2137298155941815037, guid: 545f66e5a1fc74b4c8cdfb7245f6226a, type: 3}

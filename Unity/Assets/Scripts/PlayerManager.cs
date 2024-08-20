@@ -62,7 +62,6 @@ public class PlayerManager : MonoBehaviour
 
         }
 
-        maxCollected = Math.Max(maxCollected, level1Collectables);
         passer.time = speedrunTime;
         passer.deaths = deathCount;
         passer.scales = maxCollected;

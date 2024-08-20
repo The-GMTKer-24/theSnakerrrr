@@ -14,6 +14,7 @@ public class Collectable : MonoBehaviour
         {
             Instantiate(collectParticles, transform.position, Quaternion.identity);
             PlayerManager.Instance.level1Collectables++;
+            PlayerManager.Instance.maxCollected++;
             Destroy(gameObject);
         }
     }
