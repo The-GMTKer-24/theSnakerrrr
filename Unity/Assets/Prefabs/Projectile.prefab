@@ -97,6 +97,7 @@ MonoBehaviour:
   impactParticles: {fileID: 6312313018138299983, guid: f31f3e8ed2945d649b801c06215c234e, type: 3}
   enemyTag: Enemy
   damageWidth: 1
+  explosionRadius: 2
 --- !u!120 &3461535162232420671
 LineRenderer:
   serializedVersion: 2
