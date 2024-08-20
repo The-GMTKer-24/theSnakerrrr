@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject impactParticles;
     [SerializeField] private String enemyTag;
     [SerializeField] private float damageWidth;
+    [SerializeField] private float explosionRadius;
     private bool started;
     private float timer;
     private Transform source;
@@ -47,7 +48,6 @@ public class Projectile : MonoBehaviour
         float distance = Vector2.Distance(p1, p2);
         foreach (RaycastHit2D hits in Physics2D.BoxCastAll(p1,new Vector2(0.1f,damageWidth),0.0f,delta,distance))
         {
-            Debug.Log(hits);
             if (hits.collider.CompareTag(enemyTag))
             {
                 hits.transform.GetComponent<Enemy>().Die();
@@ -55,6 +55,18 @@ public class Projectile : MonoBehaviour
                 hitSomething = true;
             }
         }
+
+        foreach (Collider2D hits in Physics2D.OverlapCircleAll(p2, explosionRadius))
+        {
+            Debug.Log(hits);
+            if (hits.CompareTag(enemyTag))
+            {
+                hits.transform.GetComponent<Enemy>().Die();
+                PlayerShoot.Instance.AddAmmo();
+                hitSomething = true;
+            }
+        }
+
 
         if (hitSomething)
         {
