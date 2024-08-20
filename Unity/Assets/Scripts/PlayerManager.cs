@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -22,8 +23,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public PlayerMovement movement;
     [SerializeField] public Upgrades upgrades;
 
-    private int deathCount;
-    private float speedrunTime;
+    public int deathCount;
+    public float speedrunTime;
     
     private bool dying;
     public List<Enemy> DeadEnemies;
@@ -32,9 +33,20 @@ public class PlayerManager : MonoBehaviour
     
     public void Awake()
     {
+        DontDestroyOnLoad(this);
         Instance = this;
         deathCount = 0;
         speedrunTime = 0;
+    }
+
+    private void Update()
+    {
+        if (player)
+        {
+            Player component = player.GetComponent<Player>();
+            if (component.timer)
+                speedrunTime = component.timer.GetComponent<Clock>().GetTime();
+        }
     }
 
     public void Die()
@@ -53,7 +65,6 @@ public class PlayerManager : MonoBehaviour
 
         // Update death count and time counter
         deathCount++;
-        speedrunTime = player.GetComponent<Player>().timer.GetComponent<Clock>().GetTime();
         
         Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
         upgrades = upgradeManager.GetComponent<UpgradesManager>().upgrades;
