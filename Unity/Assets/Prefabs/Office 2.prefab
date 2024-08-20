@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6257838500146744955}
   - component: {fileID: 8672565183422022415}
+  - component: {fileID: 6995472814177128906}
   m_Layer: 0
   m_Name: Office 2
   m_TagString: Untagged
@@ -76,6 +77,74 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &6995472814177128906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91416975005323337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4267414cccc53cabda5e1d50ea00c2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
+  buildingEntrance: {fileID: 0}
+  officeEntrance: {fileID: 3750986396017990341}
+  buildingExit: {fileID: 0}
+  officeExit: {fileID: 5117028530907355573}
+  fadeOut:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.002356466
+      value: 0.9998446
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99831945
+      value: 0.0022497354
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fadeIn:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fadeInTime: 3
+  fadeOutTime: 3
+  blackScreen: {fileID: 0}
 --- !u!1 &3426541630862478530
 GameObject:
   m_ObjectHideFlags: 0
@@ -11156,6 +11225,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48522d0b55fd94c029304c55ca522345, type: 3}
+--- !u!114 &5117028530907355573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8772652931063157599, guid: 48522d0b55fd94c029304c55ca522345, type: 3}
+  m_PrefabInstance: {fileID: 4521032427439295210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d5877cb7143d39f3a4606b8705c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5960995292554283076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7783445736958706350, guid: 48522d0b55fd94c029304c55ca522345, type: 3}
@@ -11325,6 +11405,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7783445736958706350, guid: 48522d0b55fd94c029304c55ca522345, type: 3}
   m_PrefabInstance: {fileID: 5598140485856561562}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3750986396017990341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8772652931063157599, guid: 48522d0b55fd94c029304c55ca522345, type: 3}
+  m_PrefabInstance: {fileID: 5598140485856561562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014d5877cb7143d39f3a4606b8705c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5822912997335542834
 PrefabInstance:
   m_ObjectHideFlags: 0
