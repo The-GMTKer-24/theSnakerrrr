@@ -53,6 +53,11 @@ public class UpgradesManager : MonoBehaviour
             return;
         }
 
+        if (PlayerManager.Instance.upgrades.rocketBoots)
+        {
+            return;
+        }
+
         PlayerManager.Instance.level1Collectables -= jetbootsPrice;
         upgrades.rocketBoots = true;
         RefreshUpgrades();
@@ -61,6 +66,11 @@ public class UpgradesManager : MonoBehaviour
     public void ObtainGrapplingHook()
     {
         if (PlayerManager.Instance.level1Collectables < grapplePrice)
+        {
+            return;
+        }
+
+        if (PlayerManager.Instance.upgrades.grapplingHook)
         {
             return;
         }
