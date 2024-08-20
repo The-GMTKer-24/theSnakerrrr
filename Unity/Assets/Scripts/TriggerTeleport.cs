@@ -68,6 +68,14 @@ public class TriggerTeleport : MonoBehaviour
         {
             timer += Time.deltaTime;
             blackScreen.color = new Color(0f, 0f, 0f, fadeIn.Evaluate(timer / fadeInTime));
+            if (PlayerManager.Instance.player == null)
+            {
+                teleporting = false;
+                timer = 0;
+                playerManager.EnableMovement();
+                blackScreen.color = new Color(0f, 0f, 0f, 0f);
+                yield break;
+            }
             yield return null;
         }
         PlayerManager.Instance.player.transform.position = newPosition;
