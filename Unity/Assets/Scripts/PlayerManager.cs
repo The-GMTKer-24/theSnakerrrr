@@ -80,6 +80,11 @@ public class PlayerManager : MonoBehaviour
             enemy.gameObject.SetActive(true);
             DeadEnemies.Remove(enemy);
         }
+
+        if (SnakeKing.Instance)
+        {
+            Destroy(SnakeKing.Instance.gameObject);
+        }
         dying = false;
     }
 

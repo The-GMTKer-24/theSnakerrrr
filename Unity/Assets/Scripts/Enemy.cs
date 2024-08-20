@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
 
 
-    public void Die()
+    public virtual void Die()
     {
         Destroy(Instantiate(deathParticles,transform.position,quaternion.identity),deathParticlesLength);
         PlayerManager.Instance.DeadEnemies.Add(this);
