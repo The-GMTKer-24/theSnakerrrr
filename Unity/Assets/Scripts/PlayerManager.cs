@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -21,6 +22,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public PlayerMovement movement;
     [SerializeField] public Upgrades upgrades;
 
+    private int deathCount;
+    private float speedrunTime;
+    
     private bool dying;
     public List<Enemy> DeadEnemies;
 
@@ -29,6 +33,8 @@ public class PlayerManager : MonoBehaviour
     public void Awake()
     {
         Instance = this;
+        deathCount = 0;
+        speedrunTime = 0;
     }
 
     public void Die()
@@ -45,6 +51,10 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
+        // Update death count and time counter
+        deathCount++;
+        speedrunTime = player.GetComponent<Player>().timer.GetComponent<Clock>().GetTime();
+        
         Destroy(Instantiate(deathParticles, player.transform.position, Quaternion.identity),5);
         upgrades = upgradeManager.GetComponent<UpgradesManager>().upgrades;
         Destroy(player);
@@ -74,6 +84,12 @@ public class PlayerManager : MonoBehaviour
         upgradeManager = player.GetComponent<Player>().upgradeManager;
         upgradeManager.GetComponent<UpgradesManager>().upgrades = upgrades;
         camera.target = player.GetComponent<Rigidbody2D>();
+
+        // Set the visual death count and speedrun timer
+        Player playerScript = player.GetComponent<Player>();
+        playerScript.deathCount.GetComponent<TMP_Text>().text = deathCount.ToString();
+        playerScript.timer.GetComponent<Clock>().InitializeTime(speedrunTime);
+        
         foreach (Enemy enemy in DeadEnemies.ToList())
         {
             Debug.Log("Respawning "+ enemy);
