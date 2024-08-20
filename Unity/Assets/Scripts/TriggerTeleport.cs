@@ -57,6 +57,13 @@ public class TriggerTeleport : MonoBehaviour
         playerManager.DisableMovement();
         
         teleporting = true;
+        
+        if (gameObject.GetComponent<KillOnEntrance>() != null)
+        {
+            print("Killing");
+            gameObject.GetComponent<KillOnEntrance>().kill();
+        }
+        
         while (timer < fadeInTime)
         {
             timer += Time.deltaTime;
