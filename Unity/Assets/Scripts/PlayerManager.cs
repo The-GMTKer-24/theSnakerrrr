@@ -29,7 +29,6 @@ public class PlayerManager : MonoBehaviour
     public void Awake()
     {
         Instance = this;
-        EnableMovement();
     }
 
     public void Die()

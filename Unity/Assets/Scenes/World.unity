@@ -3519,6 +3519,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 393137694}
     - target: {fileID: 3768025619915128164, guid: 863cb0f2c2d92e345947a2bd31a4db0f, type: 3}
+      propertyPath: movement
+      value: 
+      objectReference: {fileID: 1227353144}
+    - target: {fileID: 3768025619915128164, guid: 863cb0f2c2d92e345947a2bd31a4db0f, type: 3}
       propertyPath: renderCam
       value: 
       objectReference: {fileID: 519387257}
@@ -3654,6 +3658,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2718235861778923730, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
   m_PrefabInstance: {fileID: 1227353126}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1227353144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7688245934234779913, guid: c46822dc0aef55e4abe6fe73788f7d22, type: 3}
+  m_PrefabInstance: {fileID: 1227353126}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227353128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6253ba571521f7a489d814f370e4f5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1242553771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3399365002197855371, guid: f853687d9da9c1f488b80eb28c805de1, type: 3}
