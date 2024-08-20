@@ -271,6 +271,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   ammonIcon1: {fileID: 7498917195091906031}
   ammonIcon2: {fileID: 137725032724545062}
+  temporarilyDisabled: 0
   ammo: 1
 --- !u!1 &6854032400142229909
 GameObject:
@@ -405,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jetForce: 5
   maxForce: 15
+  playerMovement: {fileID: 0}
   maxFuel: 2
   fuelRegenRate: 0.5
   slider: {fileID: 10950972475573988}
@@ -554,6 +556,7 @@ MonoBehaviour:
   LastWallRightTime: 0
   LastWallLeftTime: 0
   LastPressedJumpTime: 0
+  isFalling: 0
 --- !u!232 &4447723272438016970
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -5538,8 +5541,8 @@ MonoBehaviour:
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
   gunObject: {fileID: 6548670694977657411}
-  grapplePrice: 2
-  jetbootsPrice: 2
+  grapplePrice: 5
+  jetbootsPrice: 5
   grappleIcon: {fileID: 198960542079026775}
   bootsIcon: {fileID: 5120517599120264903}
   gunIcon: {fileID: 1979643780612990484}
