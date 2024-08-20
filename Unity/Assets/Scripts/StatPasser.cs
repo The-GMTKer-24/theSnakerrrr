@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class StatPasser : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class StatPasser : MonoBehaviour
 
     public void Nuke(float timeToWait, string sceneToLoad)
     {
+        Achievements.Evaluate(this);
         StartCoroutine(Boom(timeToWait, sceneToLoad));
     }
 

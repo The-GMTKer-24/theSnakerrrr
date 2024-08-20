@@ -1,4 +1,8 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public static class Achievements
 {
@@ -19,5 +23,10 @@ public static class Achievements
     public static void GetSpeedrun()
     {
         Speedrun = true;
+    }
+
+    public static void Evaluate(StatPasser stats)
+    {
+        
     }
 }
