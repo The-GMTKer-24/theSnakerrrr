@@ -5541,7 +5541,7 @@ MonoBehaviour:
   jetboots: {fileID: 8294338072398358110}
   grappleHooks: {fileID: 9164895370532238614}
   gunObject: {fileID: 6548670694977657411}
-  grapplePrice: 5
+  grapplePrice: 4
   jetbootsPrice: 5
   grappleIcon: {fileID: 198960542079026775}
   bootsIcon: {fileID: 5120517599120264903}
