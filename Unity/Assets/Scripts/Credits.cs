@@ -16,10 +16,11 @@ public class Credits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (credits.transform.position.y >= 1025)
+        if (credits.transform.position.y >= 1025 || Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene(mainMenu);
         }
+
         credits.transform.position += new Vector3(0, creditsSpeed * Time.deltaTime, 0);
     }
 }

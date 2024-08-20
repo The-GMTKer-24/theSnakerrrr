@@ -14,6 +14,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private GameObject ammonIcon1;
     [SerializeField] private GameObject ammonIcon2;
 
+    public bool temporarilyDisabled;
+    
     public int ammo;
     private InputMap inputMap;
     private InputAction shoot;
@@ -88,7 +90,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void OnShootButton(InputAction.CallbackContext obj)
     {
-        if (ammo < 1)
+        if (ammo < 1 || temporarilyDisabled)
         {
             return;
         }
