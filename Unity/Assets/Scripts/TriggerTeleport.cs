@@ -41,7 +41,7 @@ public class TriggerTeleport : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag(playerTag) && !teleporting && Input.GetKey(KeyCode.Q))
+        if (other.CompareTag(playerTag) && !teleporting && (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.E)))
         {
             StartCoroutine(TeleportPlayer());
         }
