@@ -86,11 +86,6 @@ public class PlayerShoot : MonoBehaviour
     private void Update()
     {
         UpdateAmmo();
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            ammo++;
-        }
     }
 
     private void OnShootButton(InputAction.CallbackContext obj)
