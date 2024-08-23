@@ -51,6 +51,7 @@ public class MainMenu : MonoBehaviour
     public void ResetSave()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
         Awake();
     }
 }
