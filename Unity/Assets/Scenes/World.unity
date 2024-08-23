@@ -2775,6 +2775,14 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 2.8125
       objectReference: {fileID: 0}
+    - target: {fileID: 5177869457545186173, guid: 564d3a0fe7c590e43824d6dadfabde2d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408173325786963821, guid: 564d3a0fe7c590e43824d6dadfabde2d, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28140,8 +28148,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519387255}
   - {fileID: 1227353126}
+  - {fileID: 519387255}
   - {fileID: 1214526898}
   - {fileID: 1637275901}
   - {fileID: 2452495860817325689}
