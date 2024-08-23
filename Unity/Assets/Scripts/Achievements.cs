@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 public static class Achievements
 {
@@ -15,47 +13,54 @@ public static class Achievements
     private const int MAXSCALES = 12;
     private const int TIMESECONDS = 480;
     private const int MAXDEATHS = 0;
-
+    
     public static void GetCollector()
     {
         Collector = true;
+        PlayerPrefs.SetInt("ACH_Collector", 1);
     }
 
     public static void GetCheater()
     {
         Cheater = true;
+        PlayerPrefs.SetInt("ACH_Cheater", 1);
     }
 
     public static void GetSpeedrun()
     {
         Speedrun = true;
+        PlayerPrefs.SetInt("ACH_Speedrun", 1);
     }
 
     public static void GetDeathless()
     {
         Deathless = true;
+        PlayerPrefs.SetInt("ACH_Deathless", 1);
     }
 
     public static void Evaluate(StatPasser stats)
     {
-        if (stats.scales == MAXSCALES)
+        if (stats.scales == MAXSCALES || PlayerPrefs.GetInt("ACH_Collector", 0) == 1)
         {
             GetCollector();
         }
 
-        if (stats.scales < MINSCALES)
+        if (stats.scales < MINSCALES || PlayerPrefs.GetInt("ACH_Cheater", 0) == 1)
         {
             GetCheater();
         }
 
-        if (stats.time <= TIMESECONDS)
+        if (stats.time <= TIMESECONDS || PlayerPrefs.GetInt("ACH_Speedrun", 0) == 1)
         {
             GetSpeedrun();
         }
 
-        if (stats.deaths <= MAXDEATHS)
+        if (stats.deaths <= MAXDEATHS || PlayerPrefs.GetInt("ACH_Deathless", 0) == 1)
         {
             GetDeathless();
         }
+        
+        // Save achievements
+        PlayerPrefs.Save();
     }
 }
