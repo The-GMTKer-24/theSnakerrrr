@@ -32,6 +32,10 @@ public class MenuMaker : MonoBehaviour
                 PlayerManager.Instance.playershoot.GetComponent<PlayerShoot>().temporarilyDisabled = paused;
             }            
         }
+        
+        
+        PlayerPrefs.Save();
+        
         Time.timeScale = paused ? 0 : 1;
         menu.gameObject.SetActive(paused);
     }
