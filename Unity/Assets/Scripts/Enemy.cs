@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag(playerTag))
         {
-            PlayerManager.Instance.Die();
+            //PlayerManager.Instance.Die();
         }
     }
 }

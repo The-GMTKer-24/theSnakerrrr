@@ -9,10 +9,12 @@ public static class Achievements
     public static bool Collector = false;
     public static bool Cheater = false;
     public static bool Speedrun = false;
+    public static bool Deathless = false;
     
     private const int MINSCALES = 9;
     private const int MAXSCALES = 12;
     private const int TIMESECONDS = 480;
+    private const int MAXDEATHS = 0;
 
     public static void GetCollector()
     {
@@ -27,6 +29,11 @@ public static class Achievements
     public static void GetSpeedrun()
     {
         Speedrun = true;
+    }
+
+    public static void GetDeathless()
+    {
+        Deathless = true;
     }
 
     public static void Evaluate(StatPasser stats)
@@ -44,6 +51,11 @@ public static class Achievements
         if (stats.time <= TIMESECONDS)
         {
             GetSpeedrun();
+        }
+
+        if (stats.deaths <= MAXDEATHS)
+        {
+            GetDeathless();
         }
     }
 }
