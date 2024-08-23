@@ -92,4 +92,7 @@ MonoBehaviour:
     laserGun: 0
     grapplingHook: 0
     rocketBoots: 0
+  deathCount: 0
+  speedrunTime: 0
+  maxCollected: 0
   DeadEnemies: []

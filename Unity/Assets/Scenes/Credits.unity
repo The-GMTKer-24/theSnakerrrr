@@ -1048,7 +1048,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Created by:\n\nAtticus - Coding\n\nThe Shmoogler - Coding, Level Design\n\nMax
-    - Coding \n\nCaleb - Art\n\nJayden - ?"
+    - Coding \n\nCaleb - Art\n\nJayden - Coding, Music"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27cd4bee3c55bc141b43fe2d1a5a66f6, type: 2}
   m_sharedMaterial: {fileID: 7026543430474955084, guid: 27cd4bee3c55bc141b43fe2d1a5a66f6, type: 2}
