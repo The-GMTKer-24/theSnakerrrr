@@ -1,22 +1,32 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 using TMPro;
 using UnityEngine.SceneManagement;
-using WumpusUnity;
 
 public class Credits : MonoBehaviour
 {
     [SerializeField] private String mainMenu;
     [SerializeField] private TMP_Text credits;
-    private const float creditsSpeed = 30f;
+    [SerializeField] private TMP_Text finalMessage;
+    [SerializeField] private float creditsSpeed = 30f;
 
+    private byte finalMessageAlpha;
 
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        if (credits.transform.position.y >= 1025 || Input.GetKey(KeyCode.Escape))
+        if (credits.transform.position.y >= 1350 && finalMessage.color != Color.white)
+        {
+            finalMessageAlpha++;
+            finalMessage.color = new Color32(255, 255, 255, finalMessageAlpha);
+        }
+    }
+    
+    // Update is called once per frame
+    private void Update()
+    {
+        if (credits.transform.position.y >= 1850 || Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene(mainMenu);
         }
