@@ -52,16 +52,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Webv4.loader.js";
+      var loaderUrl = buildUrl + "/Web Build.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/Webv4.data",
-        frameworkUrl: buildUrl + "/Webv4.framework.js",
-        codeUrl: buildUrl + "/Webv4.wasm",
+        dataUrl: buildUrl + "/Web Build.data",
+        frameworkUrl: buildUrl + "/Web Build.framework.js",
+        codeUrl: buildUrl + "/Web Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "The Wumpers",
         productName: "The Snakerrrr",
-        productVersion: "0.1",
+        productVersion: "1.2",
         showBanner: unityShowBanner,
       };
 
@@ -93,6 +93,7 @@
         canvas.style.height = "600px";
       }
 
+      canvas.style.background = "url('" + buildUrl + "/Web Build.jpg') center / cover";
       document.querySelector("#unity-loading-bar").style.display = "block";
 
       var script = document.createElement("script");
